@@ -9,7 +9,7 @@ import leftArrow from "../assets/svgs/landingpage/subscriptionleftarrow.svg";
 import rightArrow from "../assets/svgs/landingpage/subscriptionrightarrow.svg";
 
 const Action: FC = () => {
-  const images = [actions1, actions2, actions3, actions2, actions1, actions3];
+  const images = [actions1, actions2, actions3, actions2, actions1, actions2];
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -29,7 +29,7 @@ const Action: FC = () => {
 
   return (
     <div
-      className=""
+      className="relative"
       style={{
         backgroundImage: `url(${actionBg.src})`,
         backgroundRepeat: "no-repeat",
@@ -64,8 +64,8 @@ const Action: FC = () => {
           {currentImages.map((image, index) => (
             <div
               key={index}
-              className={`flex-none ${
-                index === 1 ? "transform scale-110 translate-y-[-30px]" : ""
+              className={`flex-none transition-transform duration-500 ease-in-out ${
+                index === 1 ? "transform scale-110 translate-y-[-30px]" : "transform scale-95"
               }`}
             >
               <Image

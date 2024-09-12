@@ -76,7 +76,7 @@ const Client: FC = () => {
           Trusted by Restaurants Around the World
         </p>
       </div>
-      <div className="relative w-full overflow-hidden">
+      <div className="relative w-full flex justify-center">
         <div
           className="flex flex-row gap-2 mt-10 mb-10 transition-transform duration-500"
           style={{ transform: `translateX(-${currentIndex * 33.33}%)` }}
@@ -84,7 +84,7 @@ const Client: FC = () => {
           {getFeedbackItems().map((feedback, index) => (
             <div
               key={index}
-              className="bg-white w-[450px] h-[250px] rounded-xl mt-8 flex-shrink-0 mx-2 shadow-2"
+              className="bg-white w-[550px] h-[250px] rounded-xl mt-8 flex-shrink-0 mx-2 shadow-2"
             >
               <div className="flex flex-col">
                 <div className="relative -mt-12 mx-auto">
@@ -104,7 +104,7 @@ const Client: FC = () => {
                       className="pl-8"
                     />
                   </div>
-                  <div className="flex flex-col pl-10">
+                  <div className="flex flex-col pl-24">
                     <Image
                       src={star}
                       alt="Star Rating"
