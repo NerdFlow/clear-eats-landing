@@ -14,13 +14,13 @@ const Solutions: FC = () => {
         <div className="bg-white font-poppins pt-28 sm:pt-60 md:pt-40 lg:pt-30 2xl:pt-80">
             <div className="text-center p-4 sm:p-12 ">
                 <h1 className="font-bold text-3xl mb-4 sm:text-4xl md:text-5xl lg:text-6xl text-black-greyish">The Solutions We Offer</h1>
-                <p className="font-normal sm:text-sm md:text-base lg:text-md">Three Powerful Tools to Elevate Your Restaurant Experience</p>
+                <p className="font-normal text-xs sm:text-sm md:text-base lg:text-md">Three Powerful Tools to Elevate Your Restaurant Experience</p>
             </div>
 
-            <div className="flex flex-col sm:flex-row md:flex-wrap lg:flex-row justify-center lg:justify-evenly items-center space-x-0 sm:space-x-6 lg:-space-x-40">
+            <div className="flex flex-col sm:flex-row md:flex-wrap lg:flex-row justify-center lg:justify-evenly items-center space-x-0 sm:space-x-6 lg:-space-x-40 p-2">
                 <div className="w-full sm:w-[250px] md:w-[280px] text-center flex flex-col items-center mb-12 sm:mb-6 md:mb-8 lg:mb-0 ">
                     <Image src={allerguard} width={64} height={64} className="mb-4" alt="Allerguard" />
-                    <h1 className="font-bold text-2xl text-black-greyish sm:text-xl md:text-2xl lg:text-2xl">Allerguard</h1>
+                    <h1 className="font-bold text-xl text-black-greyish sm:text-xl md:text-2xl lg:text-2xl">Allerguard</h1>
                     <h5 className="text-black-lightgreyish font-medium text-[14px] mb-2 sm:text-sm md:text-base lg:text-[14px]">Protect Your Customers and Your Brand</h5>
                     <p className="text-xs text-gray-500 sm:text-xs md:text-sm lg:text-xs "style={{lineHeight:'1.7'}}>Ensure that your menu meets the highest safety standards with our advanced allergen management system.</p>
                 </div>
@@ -29,7 +29,7 @@ const Solutions: FC = () => {
 
                 <div className="w-full sm:w-[300px] md:w-[280px] text-center flex flex-col items-center mb-12 sm:mb-6 md:mb-8 lg:mb-0">
                     <Image src={management} width={64} height={64} className="mb-4" alt="Management System" />
-                    <h1 className="font-bold text-2xl text-black-greyish sm:text-xl md:text-2xl lg:text-2xl">Management System</h1>
+                    <h1 className="font-bold text-xl text-black-greyish sm:text-xl md:text-2xl lg:text-2xl">Management System</h1>
                     <h5 className="text-black-lightgreyish font-medium text-[14px] mb-2 sm:text-sm md:text-base lg:text-[14px]">Efficiency at Your Fingertips</h5>
                     <p className="text-xs text-gray-500 sm:text-xs md:text-sm lg:text-xs" style={{lineHeight:'1.7'}}>
                         Manage orders, track sales, and monitor staff performance with our comprehensive management system. Keep your operations organized and running smoothly, all from one intuitive
@@ -41,7 +41,7 @@ const Solutions: FC = () => {
 
                 <div className="w-full sm:w-[300px] text-center flex flex-col items-center md:mt-6 lg:mt-0 md:w-[280px]">
                     <Image src={loyalty} width={64} height={64} className="mb-4" alt="Loyalty Program" />
-                    <h1 className="font-bold text-2xl text-black-greyish sm:text-xl md:text-2xl lg:text-2xl">Loyalty Program</h1>
+                    <h1 className="font-bold text-xl text-black-greyish sm:text-xl md:text-2xl lg:text-2xl">Loyalty Program</h1>
                     <h5 className="text-black-lightgreyish font-medium text-[14px] mb-2 sm:text-sm md:text-base lg:text-[14px]">Build Lasting Relationships</h5>
                     <p className="text-xs text-gray-500 sm:text-xs md:text-sm lg:text-xs" style={{lineHeight:'1.7'}}>
                         Our flexible loyalty program is designed to keep your customers coming back for more, helping you boost revenue and enhance customer satisfaction.

@@ -31,7 +31,7 @@ const Footer: FC = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:pl-10 lg:gap-y-6 pt-8  2xl:space-x-32 ">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:pl-10 lg:gap-y-6 pt-8 pl-4 2xl:space-x-32 ">
           <div className="space-y-2 sm:space-y-4 2xl:pl-10">
             <h1 className="font-semibold text-sm sm:text-base lg:text-lg mb-2">
               Links
