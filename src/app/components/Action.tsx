@@ -49,7 +49,7 @@ const Action: FC = () => {
       {/* Image carousel section */}
       <div className="relative flex items-center justify-center">
         <button
-          className="absolute left-4 sm:left-6 md:left-8 lg:left-10 top-1/2 transform -translate-y-1/2 z-10"
+          className="absolute left-1 sm:left-6 md:left-8 lg:left-10 top-1/2 transform -translate-y-1/2 z-10"
           onClick={prevSlide}
         >
           <Image
@@ -79,7 +79,7 @@ const Action: FC = () => {
           ))}
         </div>
         <button
-          className="absolute right-4 sm:right-6 md:right-8 lg:right-10 top-1/2 transform -translate-y-1/2 z-10"
+          className="absolute right-1 sm:right-6 md:right-8 lg:right-10 top-1/2 transform -translate-y-1/2 z-10"
           onClick={nextSlide}
         >
           <Image

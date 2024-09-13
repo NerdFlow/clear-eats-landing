@@ -31,7 +31,7 @@ const Footer: FC = () => {
           </div>
         </div>
 
-        <div className="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:pl-10 lg:gap-y-6 pt-8  2xl:space-x-32 ">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:pl-10 lg:gap-y-6 pt-8  2xl:space-x-32 ">
           <div className="space-y-2 sm:space-y-4 2xl:pl-10">
             <h1 className="font-semibold text-sm sm:text-base lg:text-lg mb-2">
               Links
@@ -82,7 +82,7 @@ const Footer: FC = () => {
               <input
                 type="email"
                 placeholder="Your email"
-                className=" rounded-full w-full h-10 sm:h-[3.4375rem] px-4 text-sm shadow-sm lg:text-xs sm:block md:block"
+                className=" rounded-full w-full h-10 sm:h-[3.4375rem] px-4 text-xs shadow-sm lg:text-xs sm:block md:block"
               />
               <button className="absolute right-2 md:right-1 lg:right-2 sm:right-0 top-1/2 transform -translate-y-1/2 bg-secondary text-white rounded-full h-8 sm:h-[2.8125rem] lg:h-[2.5rem] lg:w-[6rem] lg:text-xs lg:px-5 px-4 sm:px-8  text-xs sm:text-sm  sm:block md:block ">
                 Subscribe
