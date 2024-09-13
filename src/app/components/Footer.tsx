@@ -6,136 +6,98 @@ import phoneIcon from "../assets/svgs/landingpage/phoneIcon.svg"; // Adjust the 
 
 const Footer: FC = () => {
   return (
-    <div className="p-4 sm:p-12 font-poppins">
+    <div className="p-4 sm:p-6 lg:p-12 font-poppins">
       <div className="flex flex-col lg:flex-row lg:space-x-6 space-y-8 lg:space-y-0 lg:p-8">
         <div className="flex flex-col items-center lg:items-start space-y-2">
           <div className="mb-4 mt-4">
-            <Image src={clearEatsLogo} className="w-[15rem]" alt="Logo" />
+            <Image src={clearEatsLogo} className="w-[12rem] sm:w-[15rem]" alt="Logo" />
           </div>
 
-          <div className="flex items-center lg:items-start space-x-2 leading-10">
+          <div className="flex items-center space-x-2 leading-10">
             <Image
               src={gmailIcon}
               alt="Gmail Icon"
-              className="w-[1.5rem] h-[1.5rem]"
+              className="w-[1.25rem] h-[1.25rem] sm:w-[1.5rem] sm:h-[1.5rem]"
             />
-            <span className="text-black font-medium">Nerdflow@gmail.com</span>
+            <span className="text-black text-sm sm:text-base font-medium">Nerdflow@gmail.com</span>
           </div>
           <div className="flex items-center space-x-2">
             <Image
               src={phoneIcon}
               alt="Phone Icon"
-              className="w-[1.5rem] h-[1.5rem]"
+              className="w-[1.25rem] h-[1.25rem] sm:w-[1.5rem] sm:h-[1.5rem]"
             />
-            <span className="text-black font-medium">+1 234 456 678 89</span>
+            <span className="text-black text-sm sm:text-base font-medium">+1 234 456 678 89</span>
           </div>
         </div>
 
-        <div className="flex flex-col items-center gap-4 sm:grid sm:grid-cols-4 sm:gap-x-2 md:grid-cols-4 lg:grid-cols-4 lg:gap-x-2 lg:pl-10 pt-8">
-          <div className=" lg:space-y-4">
-            <h1 className="font-semibold text-[0.875rem] sm:text-[1rem] lg:text-[1.125rem] mb-2">
+        <div className="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:pl-10 lg:gap-y-6 pt-8  2xl:space-x-32 ">
+          <div className="space-y-2 sm:space-y-4 2xl:pl-10">
+            <h1 className="font-semibold text-sm sm:text-base lg:text-lg mb-2">
               Links
             </h1>
-            <a
-              href="#"
-              className="block text-black text-[0.625rem] sm:text-[0.875rem] lg:text-[1rem] font-medium"
-            >
+            <a href="#" className="block text-black text-xs sm:text-sm lg:text-base font-medium">
               Home
             </a>
-            <a
-              href="#"
-              className="block text-black text-[0.625rem] sm:text-[0.875rem] lg:text-[1rem] font-medium"
-            >
+            <a href="#" className="block text-black text-xs sm:text-sm lg:text-base font-medium">
               About Us
             </a>
           </div>
-          <div className=" lg:space-y-4">
-            <h1 className="font-semibold text-[0.875rem] sm:text-[1rem] lg:text-[1.125rem] mb-2">
+          <div className="space-y-2 sm:space-y-4">
+            <h1 className="font-semibold text-sm sm:text-base lg:text-lg mb-2">
               Legal
             </h1>
-            <a
-              href="#"
-              className="block text-black text-[0.625rem] sm:text-[0.875rem] lg:text-[1rem] font-medium"
-            >
+            <a href="#" className="block text-black text-xs sm:text-sm lg:text-base font-medium">
               Terms of Use
             </a>
-            <a
-              href="#"
-              className="block text-black text-[0.625rem] sm:text-[0.875rem] lg:text-[1rem] font-medium"
-            >
+            <a href="#" className="block text-black text-xs sm:text-sm lg:text-base font-medium">
               Privacy Policy
             </a>
-            <a
-              href="#"
-              className="block text-black text-[0.625rem] sm:text-[0.875rem] lg:text-[1rem] font-medium"
-            >
+            <a href="#" className="block text-black text-xs sm:text-sm lg:text-base font-medium">
               Cookie Policy
             </a>
           </div>
-          <div className=" lg:space-y-4">
-            <h1 className="font-semibold text-[0.875rem] sm:text-[1rem] lg:text-[1.125rem] mb-2">
+          <div className="space-y-2 sm:space-y-4">
+            <h1 className="font-semibold text-sm sm:text-base lg:text-lg mb-2">
               Product
             </h1>
-            <a
-              href="#"
-              className="block text-black text-[0.625rem] sm:text-[0.875rem] lg:text-[1rem] font-medium"
-            >
+            <a href="#" className="block text-black text-xs sm:text-sm lg:text-base font-medium">
               Take Tour
             </a>
-            <a
-              href="#"
-              className="block text-black text-[0.625rem] sm:text-[0.875rem] lg:text-[1rem] font-medium"
-            >
+            <a href="#" className="block text-black text-xs sm:text-sm lg:text-base font-medium">
               Live Chats
             </a>
-            <a
-              href="#"
-              className="block text-black text-[0.625rem] sm:text-[0.875rem] lg:text-[1rem] font-medium"
-            >
+            <a href="#" className="block text-black text-xs sm:text-sm lg:text-base font-medium">
               Reviews
             </a>
           </div>
-          <div className=" lg:space-y-4">
-            <h1 className="font-semibold text-[0.875rem] sm:text-[1rem] lg:text-[1.125rem] mb-2">
+          <div className="space-y-2 sm:space-y-4 ">
+            <h1 className="font-semibold text-sm sm:text-base lg:text-lg mb-2">
               Newsletter
             </h1>
-            <a
-              href="#"
-              className="block text-black text-[0.625rem] sm:text-[0.875rem] lg:text-[1rem] font-medium"
-            >
+            <a href="#" className="block text-black text-xs sm:text-sm lg:text-base font-medium">
               Stay Up to Date
             </a>
-            <div className="relative flex flex-col md:flex-row items-center">
+            <div className="relative flex flex-col items-center">
               <input
                 type="email"
                 placeholder="Your email"
-                className="border border-white rounded-full flex-grow md:w-[24rem] w-[18.75rem] h-[3.4375rem] shadow-2 mb-4 md:mb-0 p-6 hidden lg:block"
+                className=" rounded-full w-full h-10 sm:h-[3.4375rem] px-4 text-sm shadow-sm lg:text-xs sm:block md:block"
               />
-              <button className="absolute -right-8 top-1 bottom-1 h-[2.8125rem] bg-secondary text-white rounded-full flex-shrink-0 w-[8.125rem] hidden lg:block">
+              <button className="absolute right-2 md:right-1 lg:right-2 sm:right-0 top-1/2 transform -translate-y-1/2 bg-secondary text-white rounded-full h-8 sm:h-[2.8125rem] lg:h-[2.5rem] lg:w-[6rem] lg:text-xs lg:px-5 px-4 sm:px-8  text-xs sm:text-sm  sm:block md:block ">
                 Subscribe
               </button>
             </div>
           </div>
         </div>
       </div>
-      <div className="relative flex flex-col items-center justify-center sm:mx-auto md:mx-auto lg:hidden mt-4">
-        <input
-          type="email"
-          placeholder="Your email"
-          className="border border-white rounded-full sm:w-[20rem] h-[3.5rem] md:w-[24rem] shadow-2 mb-4 md:mb-4 p-6 sm:block md:block"
-        />
-        <button className="absolute right-20 sm:right-2 md:right-40 top-1 bottom-1 h-[2.8125rem] bg-secondary text-white rounded-full flex-shrink-0 w-[9.375rem] sm:block md:block">
-          Subscribe
-        </button>
-      </div>
-      <div
-        className="text-center text-black font-semibold border-t border-gray-400  sm:p-0 md:p-6 w-3/4 mx-auto "
-      >
-        <p className="text-sm sm:text-xs lg:text-[1rem] mb-4">
+
+      <div className="text-center text-black font-semibold border-t border-gray-300 mt-8 py-4">
+        <p className="text-xs sm:text-sm lg:text-base mb-2">
           Empowering Restaurants with Cutting-Edge Solutions
         </p>
-        <p className="text-sm sm:text-xs lg:text-[1rem] mt-2">
-          Copyright 2022 ClearEats inc. all rights reserved
+        <p className="text-xs sm:text-sm lg:text-base mt-2">
+          Copyright 2022 ClearEats Inc. All rights reserved
         </p>
       </div>
     </div>

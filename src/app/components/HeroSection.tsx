@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 import bgImage from "../assets/images/Frame.svg";
@@ -21,6 +21,18 @@ const HeroSection: FC = () => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+  useEffect(() => {
+    // Disable scroll when the menu is open
+    if (isMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+    // Clean up by enabling scrolling when component is unmounted or menu closes
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isMenuOpen]);
 
   return (
     <div
@@ -49,6 +61,8 @@ const HeroSection: FC = () => {
             )}
           </button>
         </div>
+
+        
 
         {/* Center Section for Medium and Large Screens */}
         <div className="hidden lg:flex md:flex justify-end flex-1 font-poppins py-4">
@@ -83,7 +97,7 @@ const HeroSection: FC = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="lg:hidden md:hidden absolute top-[4rem] left-0 w-full bg-purple text-white z-10">
+        <div className="lg:hidden md:hidden fixed inset-0  top-[4rem] left-0 w-full bg-purple bg-opacity-95  text-white z-10">
           <nav className="flex flex-col items-center space-y-4 py-4">
             <a href="#HeroSection" className="text-white text-lg font-medium">
               Home
