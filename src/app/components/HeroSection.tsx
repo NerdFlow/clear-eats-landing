@@ -21,6 +21,11 @@ const HeroSection: FC = () => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
+
   useEffect(() => {
     // Disable scroll when the menu is open
     if (isMenuOpen) {
@@ -36,10 +41,10 @@ const HeroSection: FC = () => {
 
   return (
     <div
-      className="relative max-w-full h-[25rem] sm:h-[37.5rem] md:h-[43.75rem] lg:h-[55rem] xl:h-[55rem] 2xl:h-[55rem] bg-cover bg-no-repeat"
+      className="relative max-w-full h-[25rem] sm:h-[37.5rem] md:h-[43.75rem] lg:h-[55rem] xl:h-[55rem] 2xl:h-[55rem] bg-cover bg-no-repeat " id="HeroSection"
       style={{ backgroundImage: bgImageUrl }}
     >
-      <div className="h-[1.25rem] sm:h-[1.875rem] md:h-[2.5rem] lg:h-[3.75rem] flex items-center justify-between p-8 sm:p-10 md:p-14 lg:p-16 pt-10">
+      <div className="h-[1.25rem] sm:h-[1.875rem] md:h-[2.5rem] lg:h-[3.75rem] flex items-center justify-between p-8 sm:p-10 md:p-14 lg:p-16 pt-10 scroll-smooth">
         {/* Left Section */}
         <div className="flex items-center">
           <Image
@@ -66,7 +71,7 @@ const HeroSection: FC = () => {
 
         {/* Center Section for Medium and Large Screens */}
         <div className="hidden lg:flex md:flex justify-end flex-1 font-poppins py-4">
-          <nav className="flex space-x-2 sm:space-x-4 md:space-x-8 lg:space-x-10 ml-[0.25rem] sm:ml-[1.75rem] md:ml-[2rem] lg:ml-0">
+          <nav className="flex space-x-2 sm:space-x-4 md:space-x-8 lg:space-x-4 ml-[0.25rem] sm:ml-[1.75rem] md:ml-[2rem] lg:ml-0">
             <a
               href="#HeroSection"
               className="text-white font-medium lg:text-[1rem] sm:text-sm md:text-lg"
@@ -86,7 +91,7 @@ const HeroSection: FC = () => {
               Pricing
             </a>
             <a
-              href="#"
+              href="#Features"
               className="text-white font-medium lg:text-[1rem] sm:text-sm md:text-lg"
             >
               Features
@@ -97,18 +102,18 @@ const HeroSection: FC = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="lg:hidden md:hidden fixed inset-0  top-[4rem] left-0 w-full bg-purple bg-opacity-95  text-white z-10">
-          <nav className="flex flex-col items-center space-y-4 py-4">
+        <div className="lg:hidden md:hidden fixed inset-0  top-[4rem] left-0 w-full bg-purple bg-opacity-95  text-white z-10 scroll-smooth">
+          <nav className="flex flex-col items-center space-y-4 py-4" onClick={closeMenu}>
             <a href="#HeroSection" className="text-white text-lg font-medium">
               Home
             </a>
-            <a href="#about" className="text-white text-lg font-medium">
+            <a href="#about" className="text-white text-lg font-medium" onClick={closeMenu}>
               About Us
             </a>
-            <a href="#Subscription" className="text-white text-lg font-medium">
+            <a href="#Subscription" className="text-white text-lg font-medium" onClick={closeMenu}>
               Pricing
             </a>
-            <a href="#" className="text-white text-lg font-medium">
+            <a href="#Features" className="text-white text-lg font-medium" onClick={closeMenu}>
               Features
             </a>
           </nav>
@@ -164,7 +169,7 @@ const HeroSection: FC = () => {
             </div>
           </div>
 
-          <p className="mt-[0.25rem] text-[0.4rem] sm:text-[0.4rem] md:text-[0.875rem] lg:text-[1rem] 2xl:text-[1.5rem] mb-[0.75rem] px-0 sm:px-[1.5rem] md:px-[2rem] lg:px-[2.5rem] tracking-wide">
+          <p className="mt-[0.25rem] text-[0.4rem] sm:text-[0.4rem] md:text-[0.875rem] lg:text-[0.8rem] 2xl:text-[1.5rem] mb-[0.75rem] px-0 sm:px-[1.5rem] md:px-[2rem] lg:px-[2.5rem] tracking-wide">
             Simplify Online Orders and Keep Track of All Your Business
             Operations in One Place.
           </p>

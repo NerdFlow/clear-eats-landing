@@ -82,7 +82,7 @@ const Footer: FC = () => {
               <input
                 type="email"
                 placeholder="Your email"
-                className=" rounded-full w-full h-10 sm:h-[3.4375rem] px-4 text-xs shadow-sm lg:text-xs sm:block md:block"
+                className=" rounded-full w-full h-10 sm:h-[3.4375rem] px-4 text-xs shadow-sm lg:text-xs lg:w-[14rem] sm:block md:block"
               />
               <button className="absolute right-2 md:right-1 lg:right-2 sm:right-0 top-1/2 transform -translate-y-1/2 bg-secondary text-white rounded-full h-8 sm:h-[2.8125rem] lg:h-[2.5rem] lg:w-[6rem] lg:text-xs lg:px-5 px-4 sm:px-8  text-xs sm:text-sm  sm:block md:block ">
                 Subscribe
@@ -92,7 +92,7 @@ const Footer: FC = () => {
         </div>
       </div>
 
-      <div className="text-center text-black font-semibold border-t border-gray-300 mt-8 py-4">
+      <div className="text-center text-black font-semibold border-t border-gray-300 pt-8">
         <p className="text-xs sm:text-sm lg:text-base mb-2">
           Empowering Restaurants with Cutting-Edge Solutions
         </p>

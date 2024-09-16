@@ -41,7 +41,7 @@ const Choose: FC = () => {
 
   return (
     <div
-      className="relative flex flex-col md:flex-col sm:flex-col-reverse lg:flex-row-reverse items-center justify-around md:justify-center lg:justify-around p-10"
+      className="relative flex flex-col md:flex-col sm:flex-col-reverse lg:flex-row-reverse items-center justify-around md:justify-center lg:justify-around p-10" id="Features"
       style={{
         backgroundImage: `url(${chooseBg.src})`,
         backgroundRepeat: "no-repeat",

@@ -7,10 +7,8 @@ import tick from "../assets/svgs/landingpage/tick.svg";
 import whitetick from "../assets/svgs/landingpage/whitetick.svg";
 
 const Subscription: FC = () => {
-  const bgImageSubscriptionUrl = `url(${bgImageSubscription.src})`;
-
   return (
-    <div className="p-6 sm:p-10 md:p-10 bg-white">
+    <div className="p-6 sm:p-10 md:p-10 bg-white" id="Subscription">
       <div className="text-center mb-6 md:mb-8 px-4 sm:px-6 md:px-8">
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold pt-6">
           Choose the Right Plan for Your Business
@@ -86,7 +84,7 @@ const Subscription: FC = () => {
               backgroundSize: "cover", 
               backgroundPosition: "center", 
               backgroundRepeat: "no-repeat", 
-              filter: "contrast(1.6) brightness(1.3)", 
+              filter: "brightness(1) contrast(1.1)",
             }}
           >
             <button className="absolute top-[-20px] left-1/2 transform -translate-x-1/2 text-danger-light font-bold py-2 px-4 rounded-md w-32 sm:w-36 h-8 sm:h-10 text-xs sm:text-sm bg-secondary border border-white">
