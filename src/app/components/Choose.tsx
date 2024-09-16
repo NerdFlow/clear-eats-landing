@@ -62,7 +62,7 @@ const Choose: FC = () => {
         >
           Why Clear Eats is the Right Choice for Your Restaurant
         </h1>
-        <p className="mb-6 mt-4 text-center lg:text-left lg:text-sm">
+        <p className="mb-6 mt-4 text-center lg:text-left text-xs lg:text-sm">
           Delivering Performance, Customization, and Speed
         </p>
 
