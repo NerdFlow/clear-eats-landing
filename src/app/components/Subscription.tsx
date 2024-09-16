@@ -84,7 +84,7 @@ const Subscription: FC = () => {
               backgroundSize: "cover", 
               backgroundPosition: "center", 
               backgroundRepeat: "no-repeat", 
-              filter: "brightness(1) contrast(1.1)",
+              filter: "brightness(1.2) contrast(1.1)",
             }}
           >
             <button className="absolute top-[-20px] left-1/2 transform -translate-x-1/2 text-danger-light font-bold py-2 px-4 rounded-md w-32 sm:w-36 h-8 sm:h-10 text-xs sm:text-sm bg-secondary border border-white">

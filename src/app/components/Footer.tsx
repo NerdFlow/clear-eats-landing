@@ -82,9 +82,9 @@ const Footer: FC = () => {
               <input
                 type="email"
                 placeholder="Your email"
-                className=" rounded-full w-full h-10 sm:h-[3.4375rem] px-4 text-xs shadow-sm lg:text-xs lg:w-[14rem] sm:block md:block"
+                className=" rounded-full w-full h-10 sm:h-[3.4375rem] px-4 text-[10px] shadow-sm lg:text-xs lg:w-[14rem] sm:block md:block"
               />
-              <button className="absolute right-2 md:right-1 lg:right-2 sm:right-0 top-1/2 transform -translate-y-1/2 bg-secondary text-white rounded-full h-8 sm:h-[2.8125rem] lg:h-[2.5rem] lg:w-[6rem] lg:text-xs lg:px-5 px-4 sm:px-8  text-xs sm:text-sm  sm:block md:block ">
+              <button className="absolute right-2  md:right-1 lg:right-2 sm:right-0 top-1/2 transform -translate-y-1/2 bg-secondary text-white rounded-full h-8 sm:h-[2.8125rem] lg:h-[2.5rem] lg:w-[6rem] lg:text-xs lg:px-5 px-4 sm:px-8  text-[10px] sm:text-sm  sm:block md:block ">
                 Subscribe
               </button>
             </div>

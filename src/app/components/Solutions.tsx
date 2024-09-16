@@ -36,7 +36,7 @@ const Solutions: FC = () => {
           <h1 className="font-bold text-xl text-black-greyish sm:text-xl md:text-2xl lg:text-2xl">
             Allerguard
           </h1>
-          <h5 className="text-black-lightgreyish font-medium text-[14px] mb-2 sm:text-sm md:text-base lg:text-[14px]">
+          <h5 className="text-black-lightgreyish font-medium text-[12px] mb-2 sm:text-sm md:text-base lg:text-[14px]">
             Protect Your Customers and Your Brand
           </h5>
           <p
@@ -61,7 +61,7 @@ const Solutions: FC = () => {
           <h1 className="font-bold text-xl text-black-greyish sm:text-xl md:text-2xl lg:text-2xl">
             Management System
           </h1>
-          <h5 className="text-black-lightgreyish font-medium text-[14px] mb-2 sm:text-sm md:text-base lg:text-[14px]">
+          <h5 className="text-black-lightgreyish font-medium text-[12px] mb-2 sm:text-sm md:text-base lg:text-[14px]">
             Efficiency at Your Fingertips
           </h5>
           <p
@@ -87,7 +87,7 @@ const Solutions: FC = () => {
           <h1 className="font-bold text-xl text-black-greyish sm:text-xl md:text-2xl lg:text-2xl">
             Loyalty Program
           </h1>
-          <h5 className="text-black-lightgreyish font-medium text-[14px] mb-2 sm:text-sm md:text-base lg:text-[14px]">
+          <h5 className="text-black-lightgreyish font-medium text-[12px] mb-2 sm:text-sm md:text-base lg:text-[14px]">
             Build Lasting Relationships
           </h5>
           <p
