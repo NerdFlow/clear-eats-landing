@@ -1,13 +1,13 @@
 "use client";
 import Image from "next/image";
 import { FC, useState } from "react";
+import actions1 from "../assets/images/action1.png";
+import actions2 from "../assets/images/action2.png";
+import actions3 from "../assets/images/action3.png";
 import actionBg from "../assets/svgs/landingpage/Action-bg.svg";
-import actions1 from "../assets/svgs/landingpage/actions1.svg";
-import actions2 from "../assets/svgs/landingpage/actions2.svg";
-import actions3 from "../assets/svgs/landingpage/actions3.svg";
 import leftArrow from "../assets/svgs/landingpage/subscriptionleftarrow.svg";
 import rightArrow from "../assets/svgs/landingpage/subscriptionrightarrow.svg";
-import styles from "./Action.module.css"; // Import the CSS module
+
 
 const Action: FC = () => {
   const images = [actions1, actions2, actions3, actions2, actions1, actions2];
@@ -50,7 +50,7 @@ const Action: FC = () => {
       {/* Image carousel section */}
       <div className="relative flex items-center justify-center">
         <button
-          className={`absolute left-0 sm:left-6 md:left-8 lg:left-10 top-1/2 transform -translate-y-1/2 z-10 ${styles['svg-hover']}`} // Apply hover effect class
+          className={`absolute left-0 sm:left-6 md:left-8 lg:left-10 top-1/2 transform -translate-y-1/2 z-10`} // Apply hover effect class
           onClick={prevSlide}
         >
           <Image
@@ -80,7 +80,7 @@ const Action: FC = () => {
           ))}
         </div>
         <button
-          className={`absolute right-0 sm:right-6 md:right-8 lg:right-10 top-1/2 transform -translate-y-1/2 z-10 ${styles['svg-hover']}`} // Apply hover effect class
+          className={`absolute right-0 sm:right-6 md:right-8 lg:right-10 top-1/2 transform -translate-y-1/2 z-10`} // Apply hover effect class
           onClick={nextSlide}
         >
           <Image

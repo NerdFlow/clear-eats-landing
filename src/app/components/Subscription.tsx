@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { FC } from "react";
 
-import bgImageSubscription from "../assets/images/image.png";
+import bgImageSubscription from "../assets/images/image.jpeg";
 import tick from "../assets/svgs/landingpage/tick.svg";
 import whitetick from "../assets/svgs/landingpage/whitetick.svg";
 
@@ -13,7 +13,7 @@ const Subscription: FC = () => {
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold pt-6">
           Choose the Right Plan for Your Business
         </h1>
-        <p className="mt-4 pb-6 md:pb-12 font-medium">
+        <p className="mt-4 pb-6 md:pb-12 font-normal">
           Flexible Pricing to Fit Your Needs
         </p>
       </div>
@@ -72,7 +72,7 @@ const Subscription: FC = () => {
                 </p>
               </div>
             </div>
-            <button className="text-secondary font-semibold py-2 px-4 rounded-md w-full h-12 sm:h-14 mt-4 text-sm sm:text-md border border-secondary hover:bg-secondary hover:text-white">
+            <button className="text-secondary font-semibold py-2 px-4 rounded-md w-full h-12 sm:h-14 mt-4 text-sm sm:text-md border border-secondary hover:bg-secondary hover:text-white transition-colors duration-150 ease-in">
               Proceed to Checkout
             </button>
           </div>
@@ -153,7 +153,7 @@ const Subscription: FC = () => {
                 </p>
               </div>
             </div>
-            <button className="text-white font-bold py-2 px-4 rounded-md w-full h-12 sm:h-14 text-sm sm:text-md bg-secondary mt-6 hover:bg-white hover:text-purple">
+            <button className="text-white font-bold py-2 px-4 rounded-md w-full h-12 sm:h-14 text-sm sm:text-md bg-secondary mt-6 hover:bg-white hover:text-purple transition-colors duration-150 ease-in">
               Proceed to Checkout
             </button>
           </div>
@@ -211,7 +211,7 @@ const Subscription: FC = () => {
                 </p>
               </div>
             </div>
-            <button className="text-secondary font-semibold py-2 px-4 rounded-md w-full h-12 sm:h-14 mt-4 text-sm sm:text-md border border-secondary hover:bg-secondary hover:text-white">
+            <button className="text-secondary font-semibold py-2 px-4 rounded-md w-full h-12 sm:h-14 mt-4 text-sm sm:text-md border border-secondary hover:bg-secondary hover:text-white transition-colors duration-150 ease-in">
               Proceed to Checkout
             </button>
           </div>

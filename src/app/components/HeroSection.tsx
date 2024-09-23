@@ -4,18 +4,18 @@ import Image from "next/image";
 import { FC, useEffect, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 
+import Dashboard from "../assets/images/Dashboard.png";
 import bgImage from "../assets/images/Frame.svg";
 import arrow from "../assets/svgs/landingpage/arrow.svg";
 import header from "../assets/svgs/landingpage/clear-eats header.svg";
 import cutArrow from "../assets/svgs/landingpage/cutarrow.svg";
-import Dashboard from "../assets/svgs/landingpage/Dashboard.svg";
 import leftVector1 from "../assets/svgs/landingpage/left-vector1.svg";
 import leftVector2 from "../assets/svgs/landingpage/left-vector2.svg";
 import lines from "../assets/svgs/landingpage/lines.svg";
 import rightVector from "../assets/svgs/landingpage/right-vector.svg";
 
 const HeroSection: FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false); 
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const bgImageUrl = `url(${bgImage.src})`;
 
   const toggleMenu = () => {
@@ -24,7 +24,6 @@ const HeroSection: FC = () => {
   const closeMenu = () => {
     setIsMenuOpen(false);
   };
-
 
   useEffect(() => {
     // Disable scroll when the menu is open
@@ -41,7 +40,8 @@ const HeroSection: FC = () => {
 
   return (
     <div
-      className="relative max-w-full h-[25rem] sm:h-[37.5rem] md:h-[43.75rem] lg:h-[55rem] xl:h-[55rem] 2xl:h-[55rem] bg-cover bg-no-repeat " id="HeroSection"
+      className="relative max-w-full h-[25rem] sm:h-[37.5rem] md:h-[43.75rem] lg:h-[55rem] xl:h-[55rem] 2xl:h-[55rem] bg-cover bg-no-repeat "
+      id="HeroSection"
       style={{ backgroundImage: bgImageUrl }}
     >
       <div className="h-[1.25rem] sm:h-[1.875rem] md:h-[2.5rem] lg:h-[3.75rem] flex items-center justify-between p-8 sm:p-10 md:p-14 lg:p-16 pt-10 scroll-smooth">
@@ -58,7 +58,10 @@ const HeroSection: FC = () => {
 
         {/* Burger Menu Icon for Small Screens */}
         <div className="lg:hidden md:hidden flex items-center">
-          <button onClick={toggleMenu} className="text-white focus:outline-none">
+          <button
+            onClick={toggleMenu}
+            className="text-white focus:outline-none"
+          >
             {isMenuOpen ? (
               <FaTimes size={24} /> // Close icon when menu is open
             ) : (
@@ -66,8 +69,6 @@ const HeroSection: FC = () => {
             )}
           </button>
         </div>
-
-        
 
         {/* Center Section for Medium and Large Screens */}
         <div className="hidden lg:flex md:flex justify-end flex-1 font-poppins py-4">
@@ -103,17 +104,32 @@ const HeroSection: FC = () => {
       {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="lg:hidden md:hidden fixed inset-0  top-[4rem] left-0 w-full bg-purple bg-opacity-95  text-white z-10 scroll-smooth">
-          <nav className="flex flex-col items-center space-y-4 py-4" onClick={closeMenu}>
+          <nav
+            className="flex flex-col items-center space-y-4 py-4"
+            onClick={closeMenu}
+          >
             <a href="#HeroSection" className="text-white text-lg font-medium">
               Home
             </a>
-            <a href="#about" className="text-white text-lg font-medium" onClick={closeMenu}>
+            <a
+              href="#about"
+              className="text-white text-lg font-medium"
+              onClick={closeMenu}
+            >
               About Us
             </a>
-            <a href="#Subscription" className="text-white text-lg font-medium" onClick={closeMenu}>
+            <a
+              href="#Subscription"
+              className="text-white text-lg font-medium"
+              onClick={closeMenu}
+            >
               Pricing
             </a>
-            <a href="#Features" className="text-white text-lg font-medium" onClick={closeMenu}>
+            <a
+              href="#Features"
+              className="text-white text-lg font-medium"
+              onClick={closeMenu}
+            >
               Features
             </a>
           </nav>
@@ -184,7 +200,7 @@ const HeroSection: FC = () => {
             />
           </div>
 
-          <button className="text-white font-bold text-base bg-purple w-[11rem] h-[3rem] sm:w-[11rem] lg:w-[12.5rem] rounded-full mt-[0.5rem] mb-[0.5rem] sm:mt-[1.5rem] sm:mb-[1.5rem] mx-auto hover:bg-white hover:text-purple">
+          <button className="text-white font-bold text-base bg-purple w-[11rem] h-[3rem] sm:w-[11rem] lg:w-[12.5rem] rounded-full mt-[0.5rem] mb-[0.5rem] sm:mt-[1.5rem] sm:mb-[1.5rem] mx-auto hover:bg-[#7452BA] hover:text-white  duration-150 ease-in">
             Try Now
           </button>
 

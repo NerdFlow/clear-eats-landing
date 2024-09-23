@@ -1,12 +1,12 @@
 import Image from "next/image";
 import { FC } from "react";
 
-import allerguard from "../assets/svgs/landingpage/allerguard.svg";
+import allerguard from "../assets/images/allerguard.png";
+import loyalty from "../assets/images/loyalty.png";
+import management from "../assets/images/management.png";
+import solution2 from "../assets/images/solution.png";
 import line from "../assets/svgs/landingpage/line.svg";
-import loyalty from "../assets/svgs/landingpage/loyalty.svg";
-import management from "../assets/svgs/landingpage/management.svg";
 import bgImageSolution from "../assets/svgs/landingpage/solutions2-bg.svg";
-import solution2 from "../assets/svgs/landingpage/solutions2.svg";
 
 const Solutions: FC = () => {
   const bgImageSolutionUrl = `url(${bgImageSolution.src})`;

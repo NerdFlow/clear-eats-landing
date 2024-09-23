@@ -37,6 +37,16 @@ const Client: FC = () => {
       feedback:
         "Our customers love the rewards, and we love the repeat business. Win-win!",
     },
+    {
+      name: "Emily Davis",
+      feedback:
+        "The best investment we made this year was in the loyalty program. It paid off big time!",
+    },
+    {
+      name: "David Lee",
+      feedback:
+        "Our customers love the rewards, and we love the repeat business. Win-win!",
+    },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -53,7 +63,7 @@ const Client: FC = () => {
 
   const getFeedbackItems = () => {
     const items = [];
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < 5; i++) {
       const index = (currentIndex + i) % feedbacks.length;
       items.push(feedbacks[index]);
     }
