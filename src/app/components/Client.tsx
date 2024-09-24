@@ -37,6 +37,16 @@ const Client: FC = () => {
       feedback:
         "Our customers love the rewards, and we love the repeat business. Win-win!",
     },
+    {
+      name: "Emily Davis",
+      feedback:
+        "The best investment we made this year was in the loyalty program. It paid off big time!",
+    },
+    {
+      name: "David Lee",
+      feedback:
+        "Our customers love the rewards, and we love the repeat business. Win-win!",
+    },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -53,7 +63,7 @@ const Client: FC = () => {
 
   const getFeedbackItems = () => {
     const items = [];
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < 5; i++) {
       const index = (currentIndex + i) % feedbacks.length;
       items.push(feedbacks[index]);
     }
@@ -76,7 +86,7 @@ const Client: FC = () => {
           Trusted by Restaurants Around the World
         </p>
       </div>
-      <div className="relative w-full overflow-hidden">
+      <div className="relative w-full flex justify-center">
         <div
           className="flex flex-row gap-2 mt-10 mb-10 transition-transform duration-500"
           style={{ transform: `translateX(-${currentIndex * 33.33}%)` }}
@@ -84,7 +94,7 @@ const Client: FC = () => {
           {getFeedbackItems().map((feedback, index) => (
             <div
               key={index}
-              className="bg-white w-[450px] h-[250px] rounded-xl mt-8 flex-shrink-0 mx-2 shadow-2"
+              className="bg-white w-[550px] h-[250px] rounded-xl mt-8 flex-shrink-0 mx-2 shadow-2"
             >
               <div className="flex flex-col">
                 <div className="relative -mt-12 mx-auto">
@@ -104,7 +114,7 @@ const Client: FC = () => {
                       className="pl-8"
                     />
                   </div>
-                  <div className="flex flex-col pl-10">
+                  <div className="flex flex-col pl-24">
                     <Image
                       src={star}
                       alt="Star Rating"

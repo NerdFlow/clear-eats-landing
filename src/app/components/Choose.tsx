@@ -1,6 +1,7 @@
 "use client";
 import Image from 'next/image';
 import { FC, useState } from "react";
+import chooseBg from '../assets/svgs/landingpage/Choose-bg.svg'; // Import the background image
 import chooseImage from '../assets/svgs/landingpage/choose.svg';
 import leftArrow from '../assets/svgs/landingpage/leftarrow.svg';
 import rightArrow from '../assets/svgs/landingpage/rightarrow.svg';
@@ -39,7 +40,14 @@ const Choose: FC = () => {
   };
 
   return (
-    <div className="relative flex flex-col md:flex-col sm:flex-col-reverse lg:flex-row-reverse items-center justify-around md:justify-center bg-white p-10">
+    <div
+      className="relative flex flex-col md:flex-col sm:flex-col-reverse lg:flex-row-reverse items-center justify-around md:justify-center lg:justify-around p-10" id="Features"
+      style={{
+        backgroundImage: `url(${chooseBg.src})`,
+        backgroundRepeat: "no-repeat",
+       
+      }}
+    >
       <div className="flex-none mt-2 md:mt-0">
         <Image
           src={chooseImage}
@@ -54,7 +62,7 @@ const Choose: FC = () => {
         >
           Why Clear Eats is the Right Choice for Your Restaurant
         </h1>
-        <p className="mb-6 mt-4 text-center lg:text-left lg:text-sm">
+        <p className="mb-6 mt-4 text-center lg:text-left text-xs lg:text-sm">
           Delivering Performance, Customization, and Speed
         </p>
 

@@ -1,15 +1,16 @@
 "use client";
 import Image from "next/image";
 import { FC, useState } from "react";
+import actions1 from "../assets/images/action1.png";
+import actions2 from "../assets/images/action2.png";
+import actions3 from "../assets/images/action3.png";
 import actionBg from "../assets/svgs/landingpage/Action-bg.svg";
-import actions1 from "../assets/svgs/landingpage/actions1.svg";
-import actions2 from "../assets/svgs/landingpage/actions2.svg";
-import actions3 from "../assets/svgs/landingpage/actions3.svg";
 import leftArrow from "../assets/svgs/landingpage/subscriptionleftarrow.svg";
 import rightArrow from "../assets/svgs/landingpage/subscriptionrightarrow.svg";
 
+
 const Action: FC = () => {
-  const images = [actions1, actions2, actions3, actions2, actions1, actions3];
+  const images = [actions1, actions2, actions3, actions2, actions1, actions2];
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -29,7 +30,7 @@ const Action: FC = () => {
 
   return (
     <div
-      className=""
+      className="relative"
       style={{
         backgroundImage: `url(${actionBg.src})`,
         backgroundRepeat: "no-repeat",
@@ -49,7 +50,7 @@ const Action: FC = () => {
       {/* Image carousel section */}
       <div className="relative flex items-center justify-center">
         <button
-          className="absolute left-4 sm:left-6 md:left-8 lg:left-10 top-1/2 transform -translate-y-1/2 z-10"
+          className={`absolute left-0 sm:left-6 md:left-8 lg:left-10 top-1/2 transform -translate-y-1/2 z-10`} // Apply hover effect class
           onClick={prevSlide}
         >
           <Image
@@ -60,12 +61,12 @@ const Action: FC = () => {
             height={100}
           />
         </button>
-        <div className="flex flex-row -space-x-10 sm:-space-x-20 lg:-space-x-24">
+        <div className="flex flex-row -space-x-12 sm:-space-x-20 lg:-space-x-24">
           {currentImages.map((image, index) => (
             <div
               key={index}
-              className={`flex-none ${
-                index === 1 ? "transform scale-110 translate-y-[-30px]" : ""
+              className={`flex-none transition-transform duration-500 ease-in-out ${
+                index === 1 ? "transform scale-110 translate-y-[-30px]" : "transform scale-95"
               }`}
             >
               <Image
@@ -79,7 +80,7 @@ const Action: FC = () => {
           ))}
         </div>
         <button
-          className="absolute right-4 sm:right-6 md:right-8 lg:right-10 top-1/2 transform -translate-y-1/2 z-10"
+          className={`absolute right-0 sm:right-6 md:right-8 lg:right-10 top-1/2 transform -translate-y-1/2 z-10`} // Apply hover effect class
           onClick={nextSlide}
         >
           <Image
