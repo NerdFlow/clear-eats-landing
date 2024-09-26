@@ -1,3 +1,4 @@
+import 'aos/dist/aos.css';
 import Action from './components/Action';
 import Choose from './components/Choose';
 import Client from './components/Client';

@@ -1,12 +1,18 @@
 "use client";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import Image from 'next/image';
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import chooseBg from '../assets/svgs/landingpage/Choose-bg.svg'; // Import the background image
 import chooseImage from '../assets/svgs/landingpage/choose.svg';
 import leftArrow from '../assets/svgs/landingpage/leftarrow.svg';
 import rightArrow from '../assets/svgs/landingpage/rightarrow.svg';
 
+
 const Choose: FC = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1200 });
+  }, []);
   const carouselContent = [
     {
       title: "Fast Performance:",
@@ -48,14 +54,14 @@ const Choose: FC = () => {
        
       }}
     >
-      <div className="flex-none mt-2 md:mt-0">
+      <div className="flex-none mt-2 md:mt-0" data-aos="fade-left">
         <Image
           src={chooseImage}
           alt="Choose"
           className="w-[400px] sm:w-[400px] md:w-[500px] lg:w-[650px] ml-0 md:ml-4"
         />
       </div>
-      <div className="flex-none" style={{ maxWidth: "500px"}}>
+      <div className="flex-none" style={{ maxWidth: "500px"}} data-aos="fade-rigt">
         <h1
           className="font-bold text-center text-2xl sm:text-5xl md:text-4xl lg:text-4xl lg:text-left text-black-lightblack"
           style={{ lineHeight: "1.5" }}

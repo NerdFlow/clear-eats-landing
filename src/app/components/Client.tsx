@@ -1,15 +1,19 @@
 "use client";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import Image from "next/image";
-import { FC, useState } from "react";
-
+import { FC, useEffect, useState } from "react";
+import clientImage from '../assets/images/clientImage.png';
 import bgImageAction from '../assets/svgs/landingpage/Action-bg.svg';
-import clientImage from '../assets/svgs/landingpage/ClientImage.svg';
 import comma from '../assets/svgs/landingpage/comma.svg';
 import leftArrow from '../assets/svgs/landingpage/leftarrow.svg';
 import rightArrow from '../assets/svgs/landingpage/rightarrow.svg';
 import star from '../assets/svgs/landingpage/star.svg';
 
 const Client: FC = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1200 });
+  }, []);
   const bgImageActionUrl = `url(${bgImageAction.src})`;
   const feedbacks = [
     {
@@ -42,59 +46,57 @@ const Client: FC = () => {
       feedback:
         "The best investment we made this year was in the loyalty program. It paid off big time!",
     },
-    {
-      name: "David Lee",
-      feedback:
-        "Our customers love the rewards, and we love the repeat business. Win-win!",
-    },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  const itemsPerPage = 3; // Number of feedback items visible at once
+
   const nextFeedback = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % feedbacks.length);
+    // Cycle back to the first item when reaching the end
+    if (currentIndex + itemsPerPage >= feedbacks.length) {
+      setCurrentIndex(0); // Reset to first item
+    } else {
+      setCurrentIndex(currentIndex + 1);
+    }
   };
 
   const prevFeedback = () => {
-    setCurrentIndex(
-      (prevIndex) => (prevIndex - 1 + feedbacks.length) % feedbacks.length
-    );
+    // Cycle back to the last item when at the start
+    if (currentIndex === 0) {
+      setCurrentIndex(feedbacks.length - itemsPerPage); // Go to the last set
+    } else {
+      setCurrentIndex(currentIndex - 1);
+    }
   };
 
-  const getFeedbackItems = () => {
-    const items = [];
-    for (let i = 0; i < 5; i++) {
-      const index = (currentIndex + i) % feedbacks.length;
-      items.push(feedbacks[index]);
-    }
-    return items;
-  };
+  const displayedFeedbacks = feedbacks.slice(
+    currentIndex,
+    Math.min(currentIndex + itemsPerPage, feedbacks.length)
+  );
 
   return (
-    
     <div
       className="bg-cover overflow-hidden"
       style={{
         backgroundImage: bgImageActionUrl,
-    }}
+      }}
     >
       <div className="text-center">
         <h1 className="font-bold text-2xl sm:text-4xl md:text-4xl lg:text-6xl mt-10">
           What Our Happy Clients Say
         </h1>
-        <p className="pt-1 sm:pt-2 md:pt-4 lg:pt-6 mb-8 font-semibold text-sm">
+        <p className="pt-1 sm:pt-2 md:pt-4 lg:pt-6 mb-8 font-medium text-sm">
           Trusted by Restaurants Around the World
         </p>
       </div>
       <div className="relative w-full flex justify-center">
-        <div
-          className="flex flex-row gap-2 mt-10 mb-10 transition-transform duration-500"
-          style={{ transform: `translateX(-${currentIndex * 33.33}%)` }}
-        >
-          {getFeedbackItems().map((feedback, index) => (
+        <div className="flex flex-row gap-2 mt-10 mb-10 overflow-hidden w-full">
+          {/* Show feedbacks based on currentIndex */}
+          {displayedFeedbacks.map((feedback, index) => (
             <div
               key={index}
-              className="bg-white w-[550px] h-[250px] rounded-xl mt-8 flex-shrink-0 mx-2 shadow-2"
+              className="bg-white w-[350px] sm:w-[400px] lg:w-[550px] h-[250px] 2xl:w-[610px] rounded-xl mt-8 flex-shrink-0 mx-2 shadow-2" data-aos="fade-zoom-in"
             >
               <div className="flex flex-col">
                 <div className="relative -mt-12 mx-auto">
@@ -114,12 +116,8 @@ const Client: FC = () => {
                       className="pl-8"
                     />
                   </div>
-                  <div className="flex flex-col pl-24">
-                    <Image
-                      src={star}
-                      alt="Star Rating"
-                      className="mb-2"
-                    />
+                  <div className="flex flex-col pl-8 lg:pl-24 xl:pl-24 2xl:pl-24">
+                    <Image src={star} alt="Star Rating" className="mb-2" />
                     <h1 className="font-bold text-center">{feedback.name}</h1>
                   </div>
                 </div>

@@ -1,14 +1,19 @@
 "use client";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import Image from "next/image";
-import { FC } from "react";
+import { FC, useEffect } from "react";
 
 import bgImageSubscription from "../assets/images/image.jpeg";
 import tick from "../assets/svgs/landingpage/tick.svg";
 import whitetick from "../assets/svgs/landingpage/whitetick.svg";
 
 const Subscription: FC = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1200 });
+  }, []);
   return (
-    <div className="p-6 sm:p-10 md:p-10 bg-white" id="Subscription">
+    <div className="p-6 sm:p-10 md:p-10 bg-white" id="Subscription" >
       <div className="text-center mb-6 md:mb-8 px-4 sm:px-6 md:px-8">
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold pt-6">
           Choose the Right Plan for Your Business
@@ -18,7 +23,7 @@ const Subscription: FC = () => {
         </p>
       </div>
       <div>
-        <div className="font-inter flex flex-col lg:flex-row md:flex-col items-center space-y-6 md:space-y-6 md:space-x-5 justify-center">
+        <div className="font-inter flex flex-col lg:flex-row md:flex-col items-center space-y-6 md:space-y-6 md:space-x-5 justify-center" data-aos="fade-up">
           {/* Silver Plan */}
           <div className="flex flex-col p-6 md:p-8 bg-white border-2 border-purple rounded-2xl w-full h-[340px] sm:h-[360px]">
             <h3 className="text-lg sm:text-xl font-bold text-black-greyish">

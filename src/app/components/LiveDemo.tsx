@@ -1,17 +1,24 @@
-import { FC } from "react";
+"use client";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { FC, useEffect } from "react";
 import bgImageLiveDemo from "../assets/svgs/landingpage/LiveDemo-bg.svg"; // Adjust the path as needed
 
 const LiveDemo: FC = () => {
   const bgImageLiveDemoUrl = `url(${bgImageLiveDemo.src})`;
-
+  useEffect(() => {
+    AOS.init({ duration: 1200 });
+  }, []);
   return (
+    
     <div
       className="p-8 sm:p-12 md:p-16 lg:p-20 bg-cover"
       style={{
         backgroundImage: bgImageLiveDemoUrl,
       }}
+     
     >
-      <div className="text-center text-white">
+      <div className="text-center text-white" data-aos="fade-up">
         <h1
           className="font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl "
           style={{ lineHeight: "1.2" }}

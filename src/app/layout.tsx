@@ -1,4 +1,5 @@
- import "./globals.css";
+
+import "./globals.css";
 
 export const metadata = {
   title: "Landing Page Clear Eats",

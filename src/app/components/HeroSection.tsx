@@ -40,7 +40,7 @@ const HeroSection: FC = () => {
 
   return (
     <div
-      className="relative max-w-full h-[25rem] sm:h-[37.5rem] md:h-[43.75rem] lg:h-[55rem] xl:h-[55rem] 2xl:h-[55rem] bg-cover bg-no-repeat "
+      className="relative max-w-full h-[25rem] sm:h-[37.5rem] md:h-[43.75rem] lg:h-[55rem] xl:h-[57rem] 2xl:h-[69rem] bg-cover bg-no-repeat "
       id="HeroSection"
       style={{ backgroundImage: bgImageUrl }}
     >

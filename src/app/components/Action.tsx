@@ -1,6 +1,9 @@
 "use client";
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import Image from "next/image";
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import actions1 from "../assets/images/action1.png";
 import actions2 from "../assets/images/action2.png";
 import actions3 from "../assets/images/action3.png";
@@ -10,6 +13,9 @@ import rightArrow from "../assets/svgs/landingpage/subscriptionrightarrow.svg";
 
 
 const Action: FC = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1200 });
+  }, []);
   const images = [actions1, actions2, actions3, actions2, actions1, actions2];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -37,7 +43,7 @@ const Action: FC = () => {
         backgroundSize: "cover",
       }}
     >
-      <div className="text-center mb-8 p-4 sm:p-6 md:p-8 lg:p-10">
+      <div className="text-center mb-8 p-4 sm:p-6 md:p-8 lg:p-10" >
         <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mt-4">
           See Clear Eats in Action
         </h1>
@@ -61,7 +67,7 @@ const Action: FC = () => {
             height={100}
           />
         </button>
-        <div className="flex flex-row -space-x-12 sm:-space-x-20 lg:-space-x-24">
+        <div className="flex flex-row -space-x-12 sm:-space-x-20 lg:-space-x-24" data-aos="fade-up">
           {currentImages.map((image, index) => (
             <div
               key={index}
