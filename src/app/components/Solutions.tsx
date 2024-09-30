@@ -4,11 +4,11 @@ import 'aos/dist/aos.css';
 import Image from 'next/image';
 import { FC, useEffect } from 'react';
 import allerguard from '../assets/images/allerguard.png';
+import bgImageSolution from '../assets/images/Group.png';
 import loyalty from '../assets/images/loyalty.png';
 import management from '../assets/images/management.png';
 import solution2 from '../assets/images/solution.png';
 import line from '../assets/svgs/landingpage/line.svg';
-import bgImageSolution from '../assets/svgs/landingpage/solutions2-bg.svg';
 
 const Solutions: FC = () => {
   useEffect(() => {
@@ -19,7 +19,7 @@ const Solutions: FC = () => {
 
   return (
     <div
-      className="bg-white font-poppins pt-28 sm:pt-60 md:pt-40 lg:pt-32 xl:pt-52 2xl:pt-80"
+      className=" font-poppins max-w-full  overflow-x-hidden pt-36 sm:pt-[20%] md:pt-[16%] lg:pt-40 xl:pt-60 2xl:pt-[25%]"
       id="about"
     >
       <div className="text-center p-4 sm:p-12" data-aos="fade-up">
@@ -31,7 +31,7 @@ const Solutions: FC = () => {
         </p>
       </div>
 
-      <div className="flex flex-col sm:flex-row md:flex-wrap lg:flex-row justify-center lg:justify-evenly items-start space-x-0 sm:space-x-6 lg:-space-x-40 p-2">
+      <div className="flex flex-col sm:flex-row md:flex-wrap lg:flex-row justify-center lg:justify-evenly items-start space-y-8 sm:space-y-6 md:space-y-8 lg:space-y-0 p-2">
         <div className="w-full sm:w-[17rem] md:w-[17.5rem] lg:w-[17.5rem] text-center flex flex-col items-center mb-8 sm:mb-6 md:mb-8 lg:mb-0" data-aos="fade-up">
           <Image
             src={allerguard}
@@ -109,15 +109,15 @@ const Solutions: FC = () => {
       </div>
 
       <div
-        className="bg-cover flex flex-col lg:flex-row items-center justify-center md:justify-between lg:justify-around p-6 sm:p-8 md: lg:p-20 mt-16 sm:mt-16 md:mt-18 lg:mt-20"
+        className="bg-cover flex flex-col lg:flex-row items-center justify-center md:justify-between lg:justify-around p-6 sm:p-8 md:p-12 lg:p-20 mt-16 sm:mt-16 md:mt-18 lg:mt-20"
         style={{ backgroundImage: bgImageSolutionUrl }}
       >
-        <div className="flex-none mb-2 sm:mb-6 md:mb-7 lg:mb-4 " data-aos="fade-right">
+        <div className="flex-none mb-2 sm:mb-6 md:mb-7 lg:mb-4" data-aos="fade-right">
           <Image
             src={solution2}
             width={360}
             height={360}
-            className="w-[360px] sm:w-[360px] md:w-[550px] lg:w-[570px] h-auto"
+            className="w-full sm:w-[360px] md:w-[550px] lg:w-[570px] h-auto"
             alt="Solutions Overview"
           />
         </div>
@@ -128,14 +128,14 @@ const Solutions: FC = () => {
           >
             Empowering Your Restaurant with Cutting-Edge Solutions
           </h1>
-          <p className="mb-4 text-[14px] text-black-greyish font-normal w-[345px] sm:w-full sm:text-sm md:text-base lg:text-[14px] lg:text-left leading-snug sm:leading-normal lg:max-w-[22rem]">
+          <p className="mb-4 text-[14px] text-black-greyish font-normal sm:text-sm md:text-base lg:text-[14px] lg:text-left leading-snug sm:leading-normal lg:max-w-[22rem]">
             Clear Eats is the Go-to platform for Restaurants Looking to
             streamline their operations and elevate the customer experience. Our
             innovative tools make it easy to manage orders, track sales, and
             customize your offerings.
           </p>
           <div className="flex justify-center lg:justify-start">
-            <button className="bg-purple text-white rounded-full w-[180px] h-[40px] font-bold text-xs sm:w-[180px] sm:h-[40px] md:w-[190px] md:h-[43px] lg:w-[200px] lg:h-[45px]">
+            <button className="bg-purple text-white rounded-full w-full sm:w-[180px] md:w-[190px] lg:w-[200px] h-[40px] sm:h-[40px] md:h-[43px] lg:h-[45px] font-bold text-xs">
               See How Clear Eats works!
             </button>
           </div>

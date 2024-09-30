@@ -36,7 +36,7 @@ const Action: FC = () => {
 
   return (
     <div
-      className="relative"
+      className="relative max-w-full"
       style={{
         backgroundImage: `url(${actionBg.src})`,
         backgroundRepeat: "no-repeat",

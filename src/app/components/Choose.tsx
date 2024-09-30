@@ -8,7 +8,6 @@ import chooseImage from '../assets/svgs/landingpage/choose.svg';
 import leftArrow from '../assets/svgs/landingpage/leftarrow.svg';
 import rightArrow from '../assets/svgs/landingpage/rightarrow.svg';
 
-
 const Choose: FC = () => {
   useEffect(() => {
     AOS.init({ duration: 1200 });
@@ -47,23 +46,28 @@ const Choose: FC = () => {
 
   return (
     <div
-      className="relative flex flex-col md:flex-col sm:flex-col-reverse lg:flex-row-reverse items-center justify-around md:justify-center lg:justify-around p-10" id="Features"
+      className="relative flex flex-col lg:flex-row-reverse items-center justify-between lg:justify-around p-6 sm:p-10"
+      id="Features"
       style={{
         backgroundImage: `url(${chooseBg.src})`,
         backgroundRepeat: "no-repeat",
-       
+        backgroundSize: 'cover', // Make sure the background covers the container
+        overflow: "hidden" // Prevent overflow issues
       }}
     >
+      {/* Image Section */}
       <div className="flex-none mt-2 md:mt-0" data-aos="fade-left">
         <Image
           src={chooseImage}
           alt="Choose"
-          className="w-[400px] sm:w-[400px] md:w-[500px] lg:w-[650px] ml-0 md:ml-4"
+          className="w-[300px] sm:w-[400px] md:w-[500px] lg:w-[450px] ml-0 md:ml-4"
         />
       </div>
-      <div className="flex-none" style={{ maxWidth: "500px"}} data-aos="fade-rigt">
+
+      {/* Text & Carousel Section */}
+      <div className="flex-none max-w-full lg:max-w-[500px]" data-aos="fade-right">
         <h1
-          className="font-bold text-center text-2xl sm:text-5xl md:text-4xl lg:text-4xl lg:text-left text-black-lightblack"
+          className="font-bold text-center text-2xl sm:text-3xl md:text-4xl lg:text-4xl text-black-lightblack"
           style={{ lineHeight: "1.5" }}
         >
           Why Clear Eats is the Right Choice for Your Restaurant
@@ -72,12 +76,12 @@ const Choose: FC = () => {
           Delivering Performance, Customization, and Speed
         </p>
 
-        {/* Carousel for the div */}
-        <div className="relative rounded-xl border border-purple bg-lightgrey sm:w-[350px] md:w-[500px] h-[200px] p-6 lg:p-10 lg:w-full">
+        {/* Carousel */}
+        <div className="relative rounded-xl border border-purple bg-lightgrey w-full sm:max-w-[350px] md:max-w-[500px] h-[200px] p-4 lg:p-10 mx-auto">
           <h4 className="font-bold text-md mb-2">
             {carouselContent[currentIndex].title}
           </h4>
-          <p className="leading-6 w-full sm:w-[340px] text-sm">
+          <p className="leading-6 w-full text-sm">
             {carouselContent[currentIndex].description}
           </p>
 
@@ -87,14 +91,14 @@ const Choose: FC = () => {
               <Image
                 src={leftArrow}
                 alt="Previous"
-                className="w-8 sm:w-10"
+                className="w-6 sm:w-8"
               />
             </button>
             <button onClick={nextSlide}>
               <Image
                 src={rightArrow}
                 alt="Next"
-                className="w-8 sm:w-10"
+                className="w-6 sm:w-8"
               />
             </button>
           </div>

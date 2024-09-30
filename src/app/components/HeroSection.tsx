@@ -5,7 +5,7 @@ import { FC, useEffect, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 import Dashboard from "../assets/images/Dashboard.png";
-import bgImage from "../assets/images/Frame.svg";
+import bgImage from "../assets/images/Frame.png";
 import arrow from "../assets/svgs/landingpage/arrow.svg";
 import header from "../assets/svgs/landingpage/clear-eats header.svg";
 import cutArrow from "../assets/svgs/landingpage/cutarrow.svg";
@@ -30,17 +30,17 @@ const HeroSection: FC = () => {
     if (isMenuOpen) {
       document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = "auto";
+      // document.body.style.overflowY = "auto";
     }
     // Clean up by enabling scrolling when component is unmounted or menu closes
     return () => {
-      document.body.style.overflow = "auto";
+      // document.body.style.overflowY = "auto";
     };
   }, [isMenuOpen]);
 
   return (
     <div
-      className="relative max-w-full h-[25rem] sm:h-[37.5rem] md:h-[43.75rem] lg:h-[55rem] xl:h-[57rem] 2xl:h-[69rem] bg-cover bg-no-repeat "
+      className="relative  h-[25rem] sm:h-[32rem] md:h-[43.75rem] lg:h-[50rem] xl:h-[50rem] 2xl:h-[69rem]  bg-no-repeat bg-cover  "
       id="HeroSection"
       style={{ backgroundImage: bgImageUrl }}
     >
@@ -103,7 +103,7 @@ const HeroSection: FC = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="lg:hidden md:hidden fixed inset-0  top-[4rem] left-0 w-full bg-purple bg-opacity-95  text-white z-10 scroll-smooth">
+        <div className="lg:hidden max-w-[100%] overflow-x-hidden  md:hidden fixed inset-0  top-[4rem] left-0  bg-purple bg-opacity-95  text-white z-10 scroll-smooth">
           <nav
             className="flex flex-col items-center space-y-4 py-4"
             onClick={closeMenu}
@@ -134,7 +134,7 @@ const HeroSection: FC = () => {
             </a>
           </nav>
         </div>
-      )}
+      )} 
 
       {/* Rest of the Hero Section */}
       <div className="flex">
@@ -142,33 +142,32 @@ const HeroSection: FC = () => {
         <div className="flex-col h-[37.5rem] justify-between hidden lg:flex">
           <Image
             src={leftVector1}
-            width={70} // Adjust the width as needed
-            height={70} // Adjust the height as needed
+           
             alt="Vector 1"
           />
           <Image
             src={leftVector2}
-            width={70} // Adjust the width as needed
-            height={70} // Adjust the height as needed
+            width={100} // Adjust the width as needed
+            height={100} // Adjust the height as needed
             alt="Vector 2"
           />
         </div>
 
-        <div className="relative flex flex-col justify-center w-full h-full text-center text-white p-2 sm:p-12 lg:p-14">
+        <div className="relative flex flex-col justify-center max-w-[95%] h-full text-center text-white p-2 sm:p-12 lg:p-14">
           {/* Arrow and Heading Wrapper */}
-          <div className="relative max-w-[80%] sm:max-w-4xl md:max-w-[60%] lg:max-w-[80%] xl:max-w-[90%] mx-auto text-center">
+          <div className="relative max-w-[80%] sm:max-w-4xl md:max-w-[60%] lg:w-[80%] xl:max-w-[90%] mx-auto text-center">
             {/* Arrow positioned relative to heading */}
-            <div className="absolute lg:top-[2%] xl:left-16 2xl:left-24 2xl:top-[3%] transform -translate-y-1/2 hidden lg:flex">
+            <div className="absolute lg:top-[1%] xl:left-[7%] 2xl:left-[3%] 2xl:top-[3%] transform -translate-y-1/2 hidden lg:flex">
               <Image
                 src={cutArrow}
-                width={45}
-                height={45}
-                alt="Cut Arrow pointing towards heading"
+                width={35}
+                height={35}
+                alt="Cut Arrow pointing towards heading" 
               />
             </div>
 
             <div className="max-w-full md:max-w-full lg:max-w-[90%] xl:max-w-[90%] mx-auto text-center">
-              <h1 className="font-bold text-[1.25rem] sm:text-[2.5rem] md:text-[1.75rem] lg:text-[3rem] 2xl:text-[5rem] leading-tight sm:leading-tight md:leading-normal lg:leading-normal xl:leading-tight">
+              <h1 className="font-bold text-[1.25rem] sm:text-[2rem] md:text-[1.75rem] lg:text-[2rem] xl:text-[3.2rem] 2xl:text-[5rem] leading-tight sm:leading-tight md:leading-normal lg:leading-normal xl:leading-tight">
                 Revolutionise Your Restaurant Management With Clear Eats!
               </h1>
             </div>
@@ -205,19 +204,25 @@ const HeroSection: FC = () => {
           </button>
 
           {/* Center the dashboard image */}
+          {/* <div className="flex justify-center mt-[0.5rem]">
+            <div className=" flex justify-center w-full h-auto max-w-[34.375rem] sm:max-w-[34.375rem] md:max-w-[50rem] lg:max-w-[80%] lg:h-auto">
+              <Image src={Dashboard} alt="Dashboard" />
+            </div>
+          </div> */}
           <div className="flex justify-center mt-[0.5rem]">
-            <div className=" flex justify-center w-full h-auto max-w-[34.375rem] sm:max-w-[34.375rem] md:max-w-[50rem] lg:max-w-[90rem] lg:h-auto">
+            <div className=" flex justify-center max-w-[80%] h-auto mx-auto lg:h-auto">
               <Image src={Dashboard} alt="Dashboard" />
             </div>
           </div>
+
         </div>
 
         {/* Right Vectors */}
-        <div className="flex-col h-[37.5rem] justify-between hidden lg:flex">
+        <div className="flex-col h-[40rem] justify-between hidden lg:flex">
           <Image
             src={rightVector}
-            width={70} // Adjust the width as needed
-            height={70} // Adjust the height as needed
+            width={100} // Adjust the width as needed
+            height={100} // Adjust the height as needed
             alt="Vector 3"
           />
         </div>

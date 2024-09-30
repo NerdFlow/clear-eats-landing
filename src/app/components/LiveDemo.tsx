@@ -12,7 +12,7 @@ const LiveDemo: FC = () => {
   return (
     
     <div
-      className="p-8 sm:p-12 md:p-16 lg:p-20 bg-cover"
+      className="p-8 sm:p-12 md:p-16 lg:p-20 bg-cover max-w-full"
       style={{
         backgroundImage: bgImageLiveDemoUrl,
       }}
