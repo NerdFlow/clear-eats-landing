@@ -1,29 +1,29 @@
-"use client";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import Image from 'next/image';
-import { FC, useEffect } from 'react';
-import allerguard from '../assets/images/allerguard.png';
-import bgImageSolution from '../assets/images/Group.png';
-import loyalty from '../assets/images/loyalty.png';
-import management from '../assets/images/management.png';
-import solution2 from '../assets/images/solution.png';
-import line from '../assets/svgs/landingpage/line.svg';
+"use client"
+import AOS from "aos"
+import "aos/dist/aos.css"
+import Image from "next/image"
+import { FC, useEffect } from "react"
+import allerguard from "../assets/images/allerguard.png"
+import bgImageSolution from "../assets/images/Group.png"
+import loyalty from "../assets/images/loyalty.png"
+import management from "../assets/images/management.png"
+import solution2 from "../assets/images/solution.png"
+import line from "../assets/svgs/landingpage/line.svg"
 
 const Solutions: FC = () => {
   useEffect(() => {
-    AOS.init({ duration: 1200 });
-  }, []);
+    AOS.init({ duration: 1200 })
+  }, [])
 
-  const bgImageSolutionUrl = `url(${bgImageSolution.src})`;
+  const bgImageSolutionUrl = `url(${bgImageSolution.src})`
 
   return (
     <div
-      className=" font-poppins max-w-full  overflow-x-hidden pt-36 sm:pt-[20%] md:pt-[16%] lg:pt-40 xl:pt-60 2xl:pt-[25%]"
+      className=" font-poppins max-w-full  overflow-x-hidden pt-36 sm:pt-[20%] md:pt-[16%] lg:pt-[20rem] xl:pt-[16%] "
       id="about"
     >
       <div className="text-center p-4 sm:p-12" data-aos="fade-up">
-        <h1 className="font-bold text-3xl mb-4 sm:text-4xl md:text-5xl lg:text-5xl text-black-greyish">
+        <h1 className="font-bold text-3.5xl text-black-greyish">
           The Solutions We Offer
         </h1>
         <p className="font-normal text-xs sm:text-sm md:text-base lg:text-sm">
@@ -32,7 +32,10 @@ const Solutions: FC = () => {
       </div>
 
       <div className="flex flex-col sm:flex-row md:flex-wrap lg:flex-row justify-center lg:justify-evenly items-start space-y-8 sm:space-y-6 md:space-y-8 lg:space-y-0 p-2">
-        <div className="w-full sm:w-[17rem] md:w-[17.5rem] lg:w-[17.5rem] text-center flex flex-col items-center mb-8 sm:mb-6 md:mb-8 lg:mb-0" data-aos="fade-up">
+        <div
+          className="w-full sm:w-[17rem] md:w-[17.5rem] lg:w-[17.5rem] text-center flex flex-col items-center mb-8 sm:mb-6 md:mb-8 lg:mb-0"
+          data-aos="fade-up"
+        >
           <Image
             src={allerguard}
             width={64}
@@ -48,7 +51,7 @@ const Solutions: FC = () => {
           </h5>
           <p
             className="text-xs text-gray-500 sm:text-xs md:text-sm lg:text-xs"
-            style={{ lineHeight: '1.7' }}
+            style={{ lineHeight: "1.7" }}
           >
             Ensure that your menu meets the highest safety standards with our
             advanced allergen management system.
@@ -57,7 +60,10 @@ const Solutions: FC = () => {
 
         <Image src={line} className="hidden lg:block md:block" alt="Divider" />
 
-        <div className="w-full sm:w-[17rem] md:w-[17.5rem] lg:w-[17.5rem] text-center flex flex-col items-center mb-8 sm:mb-6 md:mb-8 lg:mb-0" data-aos="fade-up">
+        <div
+          className="w-full sm:w-[17rem] md:w-[17.5rem] lg:w-[17.5rem] text-center flex flex-col items-center mb-8 sm:mb-6 md:mb-8 lg:mb-0"
+          data-aos="fade-up"
+        >
           <Image
             src={management}
             width={64}
@@ -73,7 +79,7 @@ const Solutions: FC = () => {
           </h5>
           <p
             className="text-xs text-gray-500 sm:text-xs md:text-sm lg:text-xs"
-            style={{ lineHeight: '1.7' }}
+            style={{ lineHeight: "1.7" }}
           >
             Manage orders, track sales, and monitor staff performance with our
             comprehensive management system. Keep your operations organized and
@@ -83,7 +89,10 @@ const Solutions: FC = () => {
 
         <Image src={line} className="hidden lg:block" alt="Divider" />
 
-        <div className="w-full sm:w-[17rem] md:w-[17.5rem] lg:w-[17.5rem] text-center flex flex-col items-center md:mt-6 lg:mt-0" data-aos="fade-up">
+        <div
+          className="w-full sm:w-[17rem] md:w-[17.5rem] lg:w-[17.5rem] text-center flex flex-col items-center md:mt-6 lg:mt-0"
+          data-aos="fade-up"
+        >
           <Image
             src={loyalty}
             width={64}
@@ -99,7 +108,7 @@ const Solutions: FC = () => {
           </h5>
           <p
             className="text-xs text-gray-500 sm:text-xs md:text-sm lg:text-xs"
-            style={{ lineHeight: '1.7' }}
+            style={{ lineHeight: "1.7" }}
           >
             Our flexible loyalty program is designed to keep your customers
             coming back for more, helping you boost revenue and enhance customer
@@ -112,7 +121,10 @@ const Solutions: FC = () => {
         className="bg-cover flex flex-col lg:flex-row items-center justify-center md:justify-between lg:justify-around p-6 sm:p-8 md:p-12 lg:p-20 mt-16 sm:mt-16 md:mt-18 lg:mt-20"
         style={{ backgroundImage: bgImageSolutionUrl }}
       >
-        <div className="flex-none mb-2 sm:mb-6 md:mb-7 lg:mb-4" data-aos="fade-right">
+        <div
+          className="flex-none mb-2 sm:mb-6 md:mb-7 lg:mb-4"
+          data-aos="fade-right"
+        >
           <Image
             src={solution2}
             width={360}
@@ -121,10 +133,13 @@ const Solutions: FC = () => {
             alt="Solutions Overview"
           />
         </div>
-        <div className="flex-none md:max-w-[470px] lg:max-w-[30rem]" data-aos="fade-left">
+        <div
+          className="flex-none md:max-w-[470px] lg:max-w-[30rem]"
+          data-aos="fade-left"
+        >
           <h1
-            className="font-bold text-2xl mb-4 text-black-greyish sm:text-4xl md:text-4xl lg:text-4xl lg:max-w-[29rem]"
-            style={{ lineHeight: '2.6rem' }}
+            className="font-bold text-2xl mb-4 text-black-greyish sm:text-3xl  lg:max-w-[29rem]"
+            style={{ lineHeight: "1.3" }}
           >
             Empowering Your Restaurant with Cutting-Edge Solutions
           </h1>
@@ -142,7 +157,7 @@ const Solutions: FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Solutions;
+export default Solutions

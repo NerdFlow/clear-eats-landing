@@ -1,17 +1,17 @@
-"use client";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import Image from 'next/image';
-import { FC, useEffect, useState } from "react";
-import chooseBg from '../assets/svgs/landingpage/Choose-bg.svg'; // Import the background image
-import chooseImage from '../assets/svgs/landingpage/choose.svg';
-import leftArrow from '../assets/svgs/landingpage/leftarrow.svg';
-import rightArrow from '../assets/svgs/landingpage/rightarrow.svg';
+"use client"
+import AOS from "aos"
+import "aos/dist/aos.css"
+import Image from "next/image"
+import { FC, useEffect, useState } from "react"
+import chooseBg from "../assets/svgs/landingpage/Choose-bg.svg" // Import the background image
+import chooseImage from "../assets/svgs/landingpage/choose.svg"
+import leftArrow from "../assets/svgs/landingpage/leftarrow.svg"
+import rightArrow from "../assets/svgs/landingpage/rightarrow.svg"
 
 const Choose: FC = () => {
   useEffect(() => {
-    AOS.init({ duration: 1200 });
-  }, []);
+    AOS.init({ duration: 1200 })
+  }, [])
   const carouselContent = [
     {
       title: "Fast Performance:",
@@ -28,21 +28,21 @@ const Choose: FC = () => {
       description:
         "Streamline your restaurant management with tools designed to enhance productivity and reduce operational hassles.",
     },
-  ];
+  ]
 
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0)
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex === carouselContent.length - 1 ? 0 : prevIndex + 1
-    );
-  };
+    )
+  }
 
   const prevSlide = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? carouselContent.length - 1 : prevIndex - 1
-    );
-  };
+    )
+  }
 
   return (
     <div
@@ -51,8 +51,8 @@ const Choose: FC = () => {
       style={{
         backgroundImage: `url(${chooseBg.src})`,
         backgroundRepeat: "no-repeat",
-        backgroundSize: 'cover', // Make sure the background covers the container
-        overflow: "hidden" // Prevent overflow issues
+        backgroundSize: "cover", // Make sure the background covers the container
+        overflow: "hidden", // Prevent overflow issues
       }}
     >
       {/* Image Section */}
@@ -65,10 +65,13 @@ const Choose: FC = () => {
       </div>
 
       {/* Text & Carousel Section */}
-      <div className="flex-none max-w-full lg:max-w-[500px]" data-aos="fade-right">
+      <div
+        className="flex-none max-w-full lg:max-w-[500px]"
+        data-aos="fade-right"
+      >
         <h1
-          className="font-bold text-center text-2xl sm:text-3xl md:text-4xl lg:text-4xl text-black-lightblack"
-          style={{ lineHeight: "1.5" }}
+          className="font-bold text-center text-2xl sm:text-3xl  text-black-lightblack"
+          style={{ lineHeight: "1.3" }}
         >
           Why Clear Eats is the Right Choice for Your Restaurant
         </h1>
@@ -88,24 +91,16 @@ const Choose: FC = () => {
           {/* Carousel Navigation */}
           <div className="absolute bottom-4 right-4 flex space-x-2">
             <button onClick={prevSlide}>
-              <Image
-                src={leftArrow}
-                alt="Previous"
-                className="w-6 sm:w-8"
-              />
+              <Image src={leftArrow} alt="Previous" className="w-6 sm:w-8" />
             </button>
             <button onClick={nextSlide}>
-              <Image
-                src={rightArrow}
-                alt="Next"
-                className="w-6 sm:w-8"
-              />
+              <Image src={rightArrow} alt="Next" className="w-6 sm:w-8" />
             </button>
           </div>
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Choose;
+export default Choose

@@ -1,8 +1,8 @@
-import Image from "next/image";
-import { FC } from "react";
-import clearEatsLogo from "../assets/svgs/landingpage/clear-eats footer.svg"; // Adjust the path as needed
-import gmailIcon from "../assets/svgs/landingpage/gmailIcon.svg"; // Adjust the path as needed
-import phoneIcon from "../assets/svgs/landingpage/phoneIcon.svg"; // Adjust the path as needed
+import Image from "next/image"
+import { FC } from "react"
+import clearEatsLogo from "../assets/svgs/landingpage/clear-eats footer.svg" // Adjust the path as needed
+import gmailIcon from "../assets/svgs/landingpage/gmailIcon.svg" // Adjust the path as needed
+import phoneIcon from "../assets/svgs/landingpage/phoneIcon.svg" // Adjust the path as needed
 
 const Footer: FC = () => {
   return (
@@ -10,7 +10,11 @@ const Footer: FC = () => {
       <div className="flex flex-col lg:flex-row lg:space-x-6 space-y-8 lg:space-y-0 lg:p-8">
         <div className="flex flex-col items-center lg:items-start space-y-2">
           <div className="mb-4 mt-4">
-            <Image src={clearEatsLogo} className="w-[12rem] sm:w-[15rem]" alt="Logo" />
+            <Image
+              src={clearEatsLogo}
+              className="w-[12rem] sm:w-[15rem]"
+              alt="Logo"
+            />
           </div>
 
           <div className="flex items-center space-x-2 leading-10">
@@ -19,7 +23,9 @@ const Footer: FC = () => {
               alt="Gmail Icon"
               className="w-[1.25rem] h-[1.25rem] sm:w-[1.5rem] sm:h-[1.5rem]"
             />
-            <span className="text-black text-sm sm:text-base font-medium">Nerdflow@gmail.com</span>
+            <span className="text-black text-sm sm:text-base font-medium">
+              Nerdflow@gmail.com
+            </span>
           </div>
           <div className="flex items-center space-x-2">
             <Image
@@ -27,7 +33,9 @@ const Footer: FC = () => {
               alt="Phone Icon"
               className="w-[1.25rem] h-[1.25rem] sm:w-[1.5rem] sm:h-[1.5rem]"
             />
-            <span className="text-black text-sm sm:text-base font-medium">+1 234 456 678 89</span>
+            <span className="text-black text-sm sm:text-base font-medium">
+              +1 234 456 678 89
+            </span>
           </div>
         </div>
 
@@ -36,10 +44,16 @@ const Footer: FC = () => {
             <h1 className="font-semibold text-sm sm:text-base lg:text-lg mb-2">
               Links
             </h1>
-            <a href="#" className="block text-black text-xs sm:text-sm lg:text-base font-medium">
+            <a
+              href="#"
+              className="block text-black text-xs sm:text-sm lg:text-base font-medium"
+            >
               Home
             </a>
-            <a href="#" className="block text-black text-xs sm:text-sm lg:text-base font-medium">
+            <a
+              href="#"
+              className="block text-black text-xs sm:text-sm lg:text-base font-medium"
+            >
               About Us
             </a>
           </div>
@@ -47,13 +61,22 @@ const Footer: FC = () => {
             <h1 className="font-semibold text-sm sm:text-base lg:text-lg mb-2">
               Legal
             </h1>
-            <a href="#" className="block text-black text-xs sm:text-sm lg:text-base font-medium">
+            <a
+              href="#"
+              className="block text-black text-xs sm:text-sm lg:text-base font-medium"
+            >
               Terms of Use
             </a>
-            <a href="#" className="block text-black text-xs sm:text-sm lg:text-base font-medium">
+            <a
+              href="#"
+              className="block text-black text-xs sm:text-sm lg:text-base font-medium"
+            >
               Privacy Policy
             </a>
-            <a href="#" className="block text-black text-xs sm:text-sm lg:text-base font-medium">
+            <a
+              href="#"
+              className="block text-black text-xs sm:text-sm lg:text-base font-medium"
+            >
               Cookie Policy
             </a>
           </div>
@@ -61,13 +84,22 @@ const Footer: FC = () => {
             <h1 className="font-semibold text-sm sm:text-base lg:text-lg mb-2">
               Product
             </h1>
-            <a href="#" className="block text-black text-xs sm:text-sm lg:text-base font-medium">
+            <a
+              href="#"
+              className="block text-black text-xs sm:text-sm lg:text-base font-medium"
+            >
               Take Tour
             </a>
-            <a href="#" className="block text-black text-xs sm:text-sm lg:text-base font-medium">
+            <a
+              href="#"
+              className="block text-black text-xs sm:text-sm lg:text-base font-medium"
+            >
               Live Chats
             </a>
-            <a href="#" className="block text-black text-xs sm:text-sm lg:text-base font-medium">
+            <a
+              href="#"
+              className="block text-black text-xs sm:text-sm lg:text-base font-medium"
+            >
               Reviews
             </a>
           </div>
@@ -75,7 +107,10 @@ const Footer: FC = () => {
             <h1 className="font-semibold text-sm sm:text-base lg:text-lg mb-2">
               Newsletter
             </h1>
-            <a href="#" className="block text-black text-xs sm:text-sm lg:text-base font-medium">
+            <a
+              href="#"
+              className="block text-black text-xs sm:text-sm lg:text-base font-medium"
+            >
               Stay Up to Date
             </a>
             <div className="relative flex flex-col items-center">
@@ -101,7 +136,7 @@ const Footer: FC = () => {
         </p>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

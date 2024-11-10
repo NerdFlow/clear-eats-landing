@@ -1,38 +1,37 @@
-"use client";
+"use client"
 
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import Image from "next/image";
-import { FC, useEffect, useState } from "react";
-import actions1 from "../assets/images/action1.png";
-import actions2 from "../assets/images/action2.png";
-import actions3 from "../assets/images/action3.png";
-import actionBg from "../assets/svgs/landingpage/Action-bg.svg";
-import leftArrow from "../assets/svgs/landingpage/subscriptionleftarrow.svg";
-import rightArrow from "../assets/svgs/landingpage/subscriptionrightarrow.svg";
-
+import AOS from "aos"
+import "aos/dist/aos.css"
+import Image from "next/image"
+import { FC, useEffect, useState } from "react"
+import actions1 from "../assets/images/action1.png"
+import actions2 from "../assets/images/action2.png"
+import actions3 from "../assets/images/action3.png"
+import actionBg from "../assets/svgs/landingpage/Action-bg.svg"
+import leftArrow from "../assets/svgs/landingpage/subscriptionleftarrow.svg"
+import rightArrow from "../assets/svgs/landingpage/subscriptionrightarrow.svg"
 
 const Action: FC = () => {
   useEffect(() => {
-    AOS.init({ duration: 1200 });
-  }, []);
-  const images = [actions1, actions2, actions3, actions2, actions1, actions2];
+    AOS.init({ duration: 1200 })
+  }, [])
+  const images = [actions1, actions2, actions3, actions2, actions1, actions2]
 
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0)
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex + 3 >= images.length ? 0 : prevIndex + 3
-    );
-  };
+    )
+  }
 
   const prevSlide = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? images.length - 3 : prevIndex - 3
-    );
-  };
+    )
+  }
 
-  const currentImages = images.slice(currentIndex, currentIndex + 3);
+  const currentImages = images.slice(currentIndex, currentIndex + 3)
 
   return (
     <div
@@ -43,8 +42,8 @@ const Action: FC = () => {
         backgroundSize: "cover",
       }}
     >
-      <div className="text-center mb-8 p-4 sm:p-6 md:p-8 lg:p-10" >
-        <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mt-4">
+      <div className="text-center mb-8 p-4 sm:p-6 md:p-8 lg:p-10">
+        <h1 className="text-2xl sm:text-3.5xl font-bold mt-4">
           See Clear Eats in Action
         </h1>
         <p className="mt-4 text-[14px]">
@@ -67,12 +66,17 @@ const Action: FC = () => {
             height={100}
           />
         </button>
-        <div className="flex flex-row -space-x-12 sm:-space-x-20 lg:-space-x-24" data-aos="fade-up">
+        <div
+          className="flex flex-row -space-x-12 sm:-space-x-20 lg:-space-x-24"
+          data-aos="fade-up"
+        >
           {currentImages.map((image, index) => (
             <div
               key={index}
               className={`flex-none transition-transform duration-500 ease-in-out ${
-                index === 1 ? "transform scale-110 translate-y-[-30px]" : "transform scale-95"
+                index === 1
+                  ? "transform scale-110 translate-y-[-30px]"
+                  : "transform scale-95"
               }`}
             >
               <Image
@@ -99,7 +103,7 @@ const Action: FC = () => {
         </button>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Action;
+export default Action

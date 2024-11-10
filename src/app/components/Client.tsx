@@ -1,21 +1,21 @@
-"use client";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import Image from "next/image";
-import { FC, useEffect, useState } from "react";
-import clientImage from '../assets/images/clientImage.png';
-import bgImageAction from '../assets/svgs/landingpage/Action-bg.svg';
-import comma from '../assets/svgs/landingpage/comma.svg';
-import leftArrow from '../assets/svgs/landingpage/leftarrow.svg';
-import rightArrow from '../assets/svgs/landingpage/rightarrow.svg';
-import star from '../assets/svgs/landingpage/star.svg';
+"use client"
+import AOS from "aos"
+import "aos/dist/aos.css"
+import Image from "next/image"
+import { FC, useEffect, useState } from "react"
+import clientImage from "../assets/images/clientImage.png"
+import bgImageAction from "../assets/svgs/landingpage/Action-bg.svg"
+import comma from "../assets/svgs/landingpage/comma.svg"
+import leftArrow from "../assets/svgs/landingpage/leftarrow.svg"
+import rightArrow from "../assets/svgs/landingpage/rightarrow.svg"
+import star from "../assets/svgs/landingpage/star.svg"
 
 const Client: FC = () => {
   useEffect(() => {
-    AOS.init({ duration: 1200 });
-  }, []);
+    AOS.init({ duration: 1200 })
+  }, [])
 
-  const bgImageActionUrl = `url(${bgImageAction.src})`;
+  const bgImageActionUrl = `url(${bgImageAction.src})`
   const feedbacks = [
     {
       name: "John De marli",
@@ -47,46 +47,46 @@ const Client: FC = () => {
       feedback:
         "The best investment we made this year was in the loyalty program. It paid off big time!",
     },
-  ];
+  ]
 
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [itemsPerPage, setItemsPerPage] = useState(3); // Default to 3
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const [itemsPerPage, setItemsPerPage] = useState(3) // Default to 3
 
   const nextFeedback = () => {
     // Move to the next feedback or reset to the first if at the end
     if (currentIndex + itemsPerPage >= feedbacks.length) {
-      setCurrentIndex(0); // Reset to first item
+      setCurrentIndex(0) // Reset to first item
     } else {
-      setCurrentIndex((prevIndex) => prevIndex + 1); // Move to the next item
+      setCurrentIndex((prevIndex) => prevIndex + 1) // Move to the next item
     }
-  };
+  }
 
   const prevFeedback = () => {
     // Move to the previous feedback or go to the last if at the start
     if (currentIndex === 0) {
-      setCurrentIndex(feedbacks.length - itemsPerPage); // Go to the last set
+      setCurrentIndex(feedbacks.length - itemsPerPage) // Go to the last set
     } else {
-      setCurrentIndex((prevIndex) => prevIndex - 1); // Move to the previous item
+      setCurrentIndex((prevIndex) => prevIndex - 1) // Move to the previous item
     }
-  };
+  }
 
   // Calculate the percentage to translate
-  const translateXValue = -(currentIndex * (100 / itemsPerPage)); // Adjust translate percentage
+  const translateXValue = -(currentIndex * (100 / itemsPerPage)) // Adjust translate percentage
 
   useEffect(() => {
     const updateItemsPerPage = () => {
       if (window.innerWidth < 640) {
-        setItemsPerPage(1); // Set to 1 for smaller screens
+        setItemsPerPage(1) // Set to 1 for smaller screens
       } else {
-        setItemsPerPage(3); // Set to 3 for larger screens
+        setItemsPerPage(3) // Set to 3 for larger screens
       }
-    };
+    }
 
-    updateItemsPerPage(); // Initial check
+    updateItemsPerPage() // Initial check
 
-    window.addEventListener('resize', updateItemsPerPage); // Update on resize
-    return () => window.removeEventListener('resize', updateItemsPerPage); // Cleanup on unmount
-  }, []);
+    window.addEventListener("resize", updateItemsPerPage) // Update on resize
+    return () => window.removeEventListener("resize", updateItemsPerPage) // Cleanup on unmount
+  }, [])
 
   return (
     <div
@@ -96,7 +96,7 @@ const Client: FC = () => {
       }}
     >
       <div className="text-center">
-        <h1 className="font-bold text-2xl sm:text-4xl md:text-4xl lg:text-6xl mt-10">
+        <h1 className="font-bold text-2xl sm:text-4xl  mt-10">
           What Our Happy Clients Say
         </h1>
         <p className="pt-1 sm:pt-2 md:pt-4 lg:pt-6 mb-8 font-medium text-sm">
@@ -104,7 +104,9 @@ const Client: FC = () => {
         </p>
       </div>
       <div className="relative w-full flex justify-center">
-        <div className="w-full overflow-hidden"> {/* Ensure container is overflow-hidden */}
+        <div className="w-full overflow-hidden">
+          {" "}
+          {/* Ensure container is overflow-hidden */}
           <div
             className="flex transition-transform duration-500 ease-in-out"
             style={{ transform: `translateX(${translateXValue}%)` }} // Apply transform
@@ -167,7 +169,7 @@ const Client: FC = () => {
         </button>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Client;
+export default Client
