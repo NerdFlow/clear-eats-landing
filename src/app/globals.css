@@ -18,3 +18,7 @@ body {
   z-index: 1000;
   display: flex;
 }
+
+.container {
+  @apply !max-w-[2080px];
+}
