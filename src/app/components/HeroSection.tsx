@@ -15,7 +15,7 @@ import Navbar from "./Navbar"
 const HeroSection: FC = () => {
   return (
     <div
-      className=" relative h-[40rem] sm:h-[33rem] md:h-[43.75rem] lg:h-[45rem] xl:h-[60rem]  bg-no-repeat bg-cover  "
+      className=" relative h-[37rem] sm:h-[40rem] lg:h-[45rem] xl:h-[60rem]  bg-no-repeat bg-cover  "
       id="HeroSection"
       style={{ backgroundImage: `url(${bgImage.src})` }}
     >
@@ -28,7 +28,7 @@ const HeroSection: FC = () => {
           <Image src={leftVector2} width={100} height={100} alt="Vector 2" />
         </div>
 
-        <div className=" translate-y-20 relative container flex flex-col justify-center max-w-[95%]text-center text-white  w-full py-0 sm:p-12 lg:p-5 xl:p-32 gap-4 sm:gap-0 xl:gap-6">
+        <div className="translate-y-10 sm:translate-y-20 relative container flex flex-col justify-center max-w-[95%]text-center text-white  w-full py-0 sm:p-12 lg:p-5 xl:p-32 gap-4 sm:gap-0 xl:gap-6">
           <div className=" relative sm:max-w-4xl md:max-w-[100%] lg:w-[100%] mx-auto text-center">
             <div className="absolute lg:top-[1%] xl:left-[7%] 2xl:left-[3%] 2xl:top-[3%] transform -translate-y-1/2 hidden lg:flex">
               <Image
