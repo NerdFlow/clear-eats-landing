@@ -13,22 +13,20 @@ const Subscription: FC = () => {
     AOS.init({ duration: 1200 })
   }, [])
   return (
-    <div className="p-6 sm:p-10 md:p-10 bg-white" id="Subscription">
+    <div className="container p-6 sm:p-10 md:p-10 bg-white" id="Subscription">
       <div className="text-center mb-6 md:mb-8 px-4 sm:px-6 md:px-8">
-        <h1 className="text-3xl sm:text-4xl font-bold pt-6">
+        <h1 className="text-xl sm:text-3xl font-bold pt-6">
           Choose the Right Plan for Your Business
         </h1>
-        <p className="mt-4 pb-6 md:pb-12 font-normal">
-          Flexible Pricing to Fit Your Needs
-        </p>
+        <p className="mt-4 font-normal">Flexible Pricing to Fit Your Needs</p>
       </div>
       <div>
         <div
-          className="font-inter flex flex-col lg:flex-row md:flex-col items-center space-y-6 md:space-y-6 md:space-x-5 justify-center"
+          className="font-inter flex flex-col lg:flex-row md:flex-col items-center space-y-6 md:space-y-6 md:space-x-5 justify-center gap-6"
           data-aos="fade-up"
         >
           {/* Silver Plan */}
-          <div className="flex flex-col p-6 md:p-8 bg-white border-2 border-purple rounded-2xl w-full h-[340px] sm:h-[360px]">
+          <div className="flex flex-col p-6 md:p-8 bg-white border-2 border-purple rounded-2xl w-full min-h-[340px] sm:min-h-[360px]">
             <h3 className="text-lg sm:text-xl font-bold text-black-greyish">
               Silver
             </h3>
@@ -86,7 +84,7 @@ const Subscription: FC = () => {
           </div>
 
           <div
-            className="relative flex flex-col p-6 md:p-8  w-full h-[390px] sm:h-[410px] rounded-2xl mx-auto -mt-5 md:-mt-7"
+            className="relative flex flex-col p-6 md:p-8  w-full min-h-[390px] sm:min-h-[410px] rounded-2xl mx-auto -mt-5 md:-mt-7"
             style={{
               backgroundImage: `url(${bgImageSubscription.src})`,
               backgroundSize: "cover",
@@ -95,7 +93,7 @@ const Subscription: FC = () => {
               filter: "brightness(1.2) contrast(1.1)",
             }}
           >
-            <button className="absolute top-[-20px] left-1/2 transform -translate-x-1/2 text-danger-light font-bold py-2 px-4 rounded-md w-32 sm:w-36 h-8 sm:h-10 text-xs sm:text-sm bg-secondary border border-white">
+            <button className="absolute -top-[15px] scale-[1.1] sm:scale-[0.9] sm:top-[-20px] left-1/2 transform -translate-x-1/2 text-danger-light font-bold py-2 px-4 rounded-md w-32 sm:w-36 h-8 sm:h-10 text-xs sm:text-sm bg-secondary border border-white">
               Best Deal
             </button>
             <h3 className="text-lg sm:text-xl font-bold text-white">
@@ -167,7 +165,7 @@ const Subscription: FC = () => {
           </div>
 
           {/* Premium Plan */}
-          <div className="flex flex-col p-6 md:p-8 bg-white border-2 border-purple rounded-2xl w-full h-[340px] sm:h-[360px] mx-auto">
+          <div className="flex flex-col p-6 md:p-8 bg-white border-2 border-purple rounded-2xl w-full min-h-[340px] sm:min-h-[360px] mx-auto">
             <h3 className="text-lg sm:text-xl font-bold text-black-greyish">
               Premium
             </h3>
