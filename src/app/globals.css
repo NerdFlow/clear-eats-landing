@@ -22,3 +22,11 @@ body {
 .container {
   @apply !max-w-[2080px];
 }
+
+.CenterZoomSlider .swiper-slide {
+  transform: scale(0.8) !important;
+  transition: transform 0.3s;
+}
+.CenterZoomSlider .swiper-slide-active {
+  transform: scale(1) !important;
+}
