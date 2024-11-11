@@ -30,3 +30,44 @@ body {
 .CenterZoomSlider .swiper-slide-active {
   transform: scale(1) !important;
 }
+
+.nav-mobile-menu {
+  @apply max-w-[100%] overflow-x-hidden fixed inset-0  top-[4rem] left-0   bg-black/90  text-white z-10 flex items-center justify-center transition-all duration-500;
+}
+
+.animate-hide-navbar {
+  transform: translateX(100%);
+  animation: hideNavbar 0.5s;
+}
+@keyframes hideNavbar {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-show-navbar {
+  animation: showNavbar 0.5s ease-in-out;
+}
+
+@keyframes showNavbar {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.nav-mobile {
+  @apply flex flex-col items-center justify-center space-y-4 w-full h-full;
+}
+.nav-mobile a {
+  @apply font-bold text-2xl py-4;
+}
+
+.nav-mobile a:hover {
+  @apply text-purple animate-pulse;
+}

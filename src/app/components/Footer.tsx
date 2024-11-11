@@ -140,11 +140,12 @@ export default Footer
 
 const NewsLetterInput = () => {
   return (
-    <div className="relative flex flex-col items-end lg:translate-x-16 xl:translate-x-0">
+    <div className="relative flex flex-col items-end lg:translate-x-12 xl:translate-x-0">
       <input
         type="email"
         placeholder="Your email"
         className="outline-none foxus:outline-none
+        ring-1 ring-gray-300
         focus:ring-2 focus:ring-purple focus:ring-offset-2 focus:ring-offset-white
         rounded-full w-full h-10 sm:h-[3.4375rem] px-4 text-xs sm:text-sm shadow-sm lg:text-xs lg:w-[14rem] sm:block md:block"
       />
