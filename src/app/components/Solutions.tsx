@@ -53,7 +53,7 @@ const Solutions: FC = () => {
             </p>
           </div>
 
-          <Image src={line} className="hidden  md:block" alt="Divider" />
+          <Image src={line} className="hidden  lg:block" alt="Divider" />
 
           <div
             className="w-full  lg:w-[17.5rem] text-center flex flex-col items-center mb-8 sm:mb-6 md:mb-8 lg:mb-0"
@@ -82,7 +82,7 @@ const Solutions: FC = () => {
             </p>
           </div>
 
-          <Image src={line} className="hidden  md:block" alt="Divider" />
+          <Image src={line} className="hidden  lg:block" alt="Divider" />
 
           <div
             className="w-full  lg:w-[17.5rem] text-center flex flex-col items-center md:mt-6 lg:mt-0"

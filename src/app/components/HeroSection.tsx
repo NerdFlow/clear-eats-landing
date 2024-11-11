@@ -15,7 +15,7 @@ import Navbar from "./Navbar"
 const HeroSection: FC = () => {
   return (
     <div
-      className=" relative h-[37rem] sm:h-[40rem] lg:h-[45rem] xl:h-[60rem]  bg-no-repeat bg-cover  "
+      className=" relative h-[37rem] sm:h-[40rem] md:h-[50rem] lg:h-[43rem] xl:h-[60rem]  bg-no-repeat bg-cover  "
       id="HeroSection"
       style={{ backgroundImage: `url(${bgImage.src})` }}
     >
