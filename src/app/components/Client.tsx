@@ -2,7 +2,12 @@
 import AOS from "aos"
 import "aos/dist/aos.css"
 import Image from "next/image"
-import { FC, useEffect, useState } from "react"
+import { FC, useEffect } from "react"
+import { Swiper, SwiperSlide } from "swiper/react"
+import { Navigation } from "swiper/modules"
+import "swiper/css"
+import "swiper/css/navigation"
+
 import clientImage from "../assets/images/clientImage.png"
 import bgImageAction from "../assets/svgs/landingpage/Action-bg.svg"
 import comma from "../assets/svgs/landingpage/comma.svg"
@@ -15,7 +20,6 @@ const Client: FC = () => {
     AOS.init({ duration: 1200 })
   }, [])
 
-  const bgImageActionUrl = `url(${bgImageAction.src})`
   const feedbacks = [
     {
       name: "John De marli",
@@ -42,130 +46,87 @@ const Client: FC = () => {
       feedback:
         "Our customers love the rewards, and we love the repeat business. Win-win!",
     },
-    {
-      name: "Emily Davis",
-      feedback:
-        "The best investment we made this year was in the loyalty program. It paid off big time!",
-    },
   ]
-
-  const [currentIndex, setCurrentIndex] = useState(0)
-  const [itemsPerPage, setItemsPerPage] = useState(3) // Default to 3
-
-  const nextFeedback = () => {
-    // Move to the next feedback or reset to the first if at the end
-    if (currentIndex + itemsPerPage >= feedbacks.length) {
-      setCurrentIndex(0) // Reset to first item
-    } else {
-      setCurrentIndex((prevIndex) => prevIndex + 1) // Move to the next item
-    }
-  }
-
-  const prevFeedback = () => {
-    // Move to the previous feedback or go to the last if at the start
-    if (currentIndex === 0) {
-      setCurrentIndex(feedbacks.length - itemsPerPage) // Go to the last set
-    } else {
-      setCurrentIndex((prevIndex) => prevIndex - 1) // Move to the previous item
-    }
-  }
-
-  // Calculate the percentage to translate
-  const translateXValue = -(currentIndex * (100 / itemsPerPage)) // Adjust translate percentage
-
-  useEffect(() => {
-    const updateItemsPerPage = () => {
-      if (window.innerWidth < 640) {
-        setItemsPerPage(1) // Set to 1 for smaller screens
-      } else {
-        setItemsPerPage(3) // Set to 3 for larger screens
-      }
-    }
-
-    updateItemsPerPage() // Initial check
-
-    window.addEventListener("resize", updateItemsPerPage) // Update on resize
-    return () => window.removeEventListener("resize", updateItemsPerPage) // Cleanup on unmount
-  }, [])
 
   return (
     <div
       className="bg-cover overflow-hidden"
       style={{
-        backgroundImage: bgImageActionUrl,
+        backgroundImage: `url(${bgImageAction.src})`,
       }}
     >
       <div className="text-center">
-        <h1 className="font-bold text-2xl sm:text-4xl  mt-10">
+        <h1 className="font-bold text-2xl sm:text-3.5xl mt-10">
           What Our Happy Clients Say
         </h1>
         <p className="pt-1 sm:pt-2 md:pt-4 lg:pt-6 mb-8 font-medium text-sm">
           Trusted by Restaurants Around the World
         </p>
       </div>
-      <div className="relative w-full flex justify-center">
-        <div className="w-full overflow-hidden">
-          {" "}
-          {/* Ensure container is overflow-hidden */}
-          <div
-            className="flex transition-transform duration-500 ease-in-out"
-            style={{ transform: `translateX(${translateXValue}%)` }} // Apply transform
-          >
-            {feedbacks.map((feedback, index) => (
-              <div
-                key={index}
-                className="bg-white w-[350px] sm:w-[400px] lg:w-[550px] h-[250px] 2xl:w-[610px] rounded-xl mt-8 flex-shrink-0 mx-2 shadow-2"
-                data-aos="fade-zoom-in"
-              >
-                <div className="flex flex-col">
-                  <div className="relative -mt-12 mx-auto">
+
+      {/* Swiper Slider */}
+      <Swiper
+        modules={[Navigation]}
+        navigation={{
+          nextEl: ".swiper_next",
+          prevEl: ".swiper_prev",
+        }}
+        loop={true}
+        slidesPerView={1}
+        spaceBetween={100}
+        centeredSlides={true}
+        breakpoints={{
+          640: { slidesPerView: 1 },
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
+        }}
+        className="relative w-[calc(100%-2rem)] container px-12 flex justify-center"
+      >
+        {feedbacks.map((feedback, index) => (
+          <SwiperSlide key={index}>
+            <div
+              className="bg-white rounded-xl mt-8 shadow-2"
+              data-aos="fade-zoom-in"
+            >
+              <div className="flex flex-col items-center">
+                <div className="relative -mt-12">
+                  <Image
+                    src={clientImage}
+                    alt="Client Image"
+                    width={100}
+                    height={100}
+                  />
+                </div>
+                <div className="flex flex-row">
+                  <div className="absolute top-14 left-0">
                     <Image
-                      src={clientImage}
-                      alt="Client Image"
-                      width={100} // Adjust width as needed
-                      height={100} // Adjust height as needed
+                      src={comma}
+                      alt="Comma Icon"
+                      width={100}
+                      className="pl-8"
                     />
                   </div>
-                  <div className="flex flex-row">
-                    <div>
-                      <Image
-                        src={comma}
-                        alt="Comma Icon"
-                        width={120}
-                        className="pl-8"
-                      />
-                    </div>
-                    <div className="flex flex-col pl-8 lg:pl-24 xl:pl-24 2xl:pl-24">
-                      <Image src={star} alt="Star Rating" className="mb-2" />
-                      <h1 className="font-bold text-center">{feedback.name}</h1>
-                    </div>
+                  <div className="flex flex-col pl-8 lg:pl-24">
+                    <Image src={star} alt="Star Rating" className="mb-2" />
+                    <h1 className="font-bold text-center">{feedback.name}</h1>
                   </div>
                 </div>
-                <p className="text-black-greyish text-center p-6 leading-6">
-                  {feedback.feedback}
-                </p>
               </div>
-            ))}
-          </div>
-        </div>
-      </div>
-      {/* Carousel Navigation */}
+              <p className="text-black-greyish text-center p-6 leading-6">
+                {feedback.feedback}
+              </p>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+
+      {/* Navigation Buttons */}
       <div className="flex space-x-2 items-center justify-center mt-6 mb-8">
-        <button onClick={prevFeedback}>
-          <Image
-            src={leftArrow}
-            alt="Previous"
-            width={40} // Adjust width as needed
-            height={40} // Adjust height as needed
-          />
+        <button className="swiper_prev">
+          <Image src={leftArrow} alt="Previous" width={40} height={40} />
         </button>
-        <button onClick={nextFeedback}>
-          <Image
-            src={rightArrow}
-            alt="Next"
-            width={40} // Adjust width as needed
-            height={40} // Adjust height as needed
-          />
+        <button className="swiper_next">
+          <Image src={rightArrow} alt="Next" width={40} height={40} />
         </button>
       </div>
     </div>
