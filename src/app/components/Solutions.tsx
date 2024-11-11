@@ -1,8 +1,6 @@
-"use client"
-import AOS from "aos"
 import "aos/dist/aos.css"
 import Image from "next/image"
-import { FC, useEffect } from "react"
+import { FC } from "react"
 import allerguard from "../assets/images/allerguard.png"
 import bgImageSolution from "../assets/images/Group.png"
 import loyalty from "../assets/images/loyalty.png"
@@ -11,10 +9,6 @@ import solution2 from "../assets/images/solution.png"
 import line from "../assets/svgs/landingpage/line.svg"
 
 const Solutions: FC = () => {
-  useEffect(() => {
-    AOS.init({ duration: 1200 })
-  }, [])
-
   const bgImageSolutionUrl = `url(${bgImageSolution.src})`
 
   return (

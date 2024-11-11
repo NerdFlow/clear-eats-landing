@@ -1,17 +1,12 @@
-"use client"
-import AOS from "aos"
 import "aos/dist/aos.css"
 import Image from "next/image"
-import { FC, useEffect } from "react"
+import { FC } from "react"
 
 import bgImageSubscription from "../assets/images/image.jpeg"
 import tick from "../assets/svgs/landingpage/tick.svg"
 import whitetick from "../assets/svgs/landingpage/whitetick.svg"
 
 const Subscription: FC = () => {
-  useEffect(() => {
-    AOS.init({ duration: 1200 })
-  }, [])
   return (
     <div className="container p-6 sm:p-10 md:p-10 bg-white" id="Subscription">
       <div className="text-center mb-6 md:mb-8 px-4 sm:px-6 md:px-8">
